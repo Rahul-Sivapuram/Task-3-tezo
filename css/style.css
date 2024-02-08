@@ -785,7 +785,7 @@ label{
     display: none;
 }
 
-.own-modal{
+.own-model{
     border: .3px solid black;
     display: none;
     background-color: white;
@@ -807,7 +807,7 @@ label{
 }
 
 /* style3.css */
-.add-employee1{
+.add-roledetails{
     margin-top: 1.4rem;
     margin-left: 12.9rem;
     display: flex;
@@ -1123,7 +1123,7 @@ label{
 }
 
 /* style2.css */
-.add-employee2{
+.add-role{
     margin-top: 1.4rem;
     margin-left: 12.9rem;
     display: flex;

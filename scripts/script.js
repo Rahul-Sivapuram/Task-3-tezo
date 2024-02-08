@@ -487,7 +487,7 @@ dotsImage.onclick=function() {
 };
 
 var ownModalDiv = document.createElement('div');
-ownModalDiv.classList.add('own-modal');
+ownModalDiv.classList.add('own-model');
 var viewParagraph = document.createElement('p');
 viewParagraph.textContent = 'View';
 ownModalDiv.appendChild(viewParagraph);
@@ -638,7 +638,7 @@ function ShowFieldDropdown()
 
 function ShowAddEmployeePage()
 {
-  var mainpage=document.querySelector(".sample-body");
+  var mainpage=document.querySelector(".table-part");
   var emppage=document.querySelector(".addemployee-page");
   var addemp=document.querySelector(".add-employee");
   if(mainpage.style.display == "block")
@@ -654,17 +654,13 @@ function ShowAddEmployeePage()
   }
 }
 
-
-
-
-
 // showing for role
 function ShowAddRolePage()
 {
   var usertable=document.querySelector(".info-cards-list");
   var rolepage=document.querySelector(".addnewrole-page");
   var filterrole=document.querySelector(".filterrole");
-  var addrole=document.querySelector(".add-employee1");
+  var addrole=document.querySelector(".add-roledetails");
 
   if(usertable.style.display == "block"){
     usertable.style.display = "none";
@@ -955,7 +951,7 @@ function SortDecToCol(inp)
 
 
 function show3dots(){
-  var dots3=document.querySelector(".own-modal");
+  var dots3=document.querySelector(".own-model");
   console.log("Hi");
   if(dots3.style.display == "none"){
     dots3.style.display = "flex";
