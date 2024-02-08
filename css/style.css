@@ -525,41 +525,41 @@ select{
 .filtercheckbox-dropdownlist{
     position: absolute;
     padding: .5rem 0;
-    top: 18rem;
-    left: 17.4rem;
+    top: 18.6rem;
+    left: 18rem;
     background-color: white;
     border-radius: .3rem;
     border:1px solid rgba(255,121,131,255);
     display: none;
     flex-direction: column;
     gap: 0.2rem;
-    width: 8rem
+    width: 9rem
 }
 .filtercheckbox-dropdownlist2{
     position: absolute;
     padding: .5rem 0;
-    top: 18rem;
-    left: 25.9rem;
+    top: 18.4rem;
+    left: 28rem;
     background-color: white;
     border-radius: .3rem;
     border:1px solid rgba(255,121,131,255);
     display: none;
     flex-direction: column;
     gap: 0.2rem;
-    width: 8rem
+    width: 9rem
 }
 .filtercheckbox-dropdownlist3{
     position: absolute;
     padding: .5rem 0;
-    top: 18rem;
-    left: 34.5rem;
+    top: 18.4rem;
+    left: 38rem;
     background-color: white;
     border-radius: .3rem;
     border:1px solid rgba(255,121,131,255);
     display: none;
     flex-direction: column;
     gap: 0.2rem;
-    width: 8rem
+    width: 9rem
 }
 .filter-icon{
     display: flex;

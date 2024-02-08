@@ -26,6 +26,7 @@ function ShowRole(){
     else{
         page2.style.display = "none";
     }
+    ShowAllCards();
 }
 
 function ShowPage2(){

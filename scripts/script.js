@@ -377,13 +377,14 @@ function ShowAllCards()
 
 function Filter()
 {
-    var sl=document.getElementById("location");
-    var sd=document.getElementById("departments");
+    var sl=document.getElementById("role-location");
+    var sd=document.getElementById("role-departments");
+    let infolist=document.querySelector(".info-cards-list");
     console.log(sl.value);
-    var infolist=document.querySelector(".info-cards-list");
+    console.log(sd.value);
     infolist.innerHTML="";
-    for(let i in d){
-        var doc=d[i];
+    for(var i in d){
+        const doc = d[i];
         if(doc.Department == sd.value && doc.Location == sl.value)
         {
             var res=CreateCard(doc);
