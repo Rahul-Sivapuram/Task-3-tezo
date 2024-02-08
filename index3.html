@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tezo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style3.css">
+</head>
+<body>
+    <!-- 
+    <div class="navbar">
+        <div onclick=ShowSidebar() class="menu">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </div>
+        
+        <div class="header-searchbar">
+            <div class="search-field">
+                <img src="./images/bxsearch.png" alt="Search symbol">
+                <input type="search" name="search"  id="search" placeholder="Search (Ctrl+/)" class="search-box">
+            </div>
+            <div class="profile">
+                <img src="./images/chineese.png" alt="Chineese symbol" srcset="">
+                <img src="./images/icon1.png" alt="Menu symbol" srcset="">
+                <img src="./images/icon2.png" alt="Moon symbol" srcset="">
+                <img src="./images/icon3.png" alt="Bell symbol" srcset="">                         
+            </div>
+            <div class="profile-box">
+                <div class="man">
+                    <img src="./images/man.jpg" alt="Human avatar" srcset="">
+                    <div class="green-dot"></div>
+                </div>
+                <span>John Abraham<br><span class="span-inside">Admin</span></span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+            </div>   
+        </div>
+    </div>
+
+  
+    <div class="sidebar">
+        <div class="sidebar-toppart">
+            <div class="logo-arrow">
+                <img src="./images/tezo.png" alt="Tezo logo" class="logo">  
+                <img src="./images/handle.png" alt="Back button" class="backbutton" onclick=HideSidebar3()>     
+            </div>    
+
+            <div class="sidebar-buttons">
+                <h3 class="heading">All</h3>
+                <a href="#">
+                    <div class="department-button-left">
+                        <img src="./svg/dashboard.svg" alt="Dashboard symbol" srcset="">
+                        <span>Dashboard</span>
+                    </div>      
+                </a>          
+                <a href="#">
+                    <div class="department-button-left">
+                        <img src="./svg/employees.svg" alt="Employees symbol" srcset="">
+                        <span id="screen3-emp">Employees</span>
+                    </div>
+                </a>
+
+                <h3 class="heading">ROLE / USER MANAGEMENT</h3>
+                <div class="special-button">
+                    <div class="dashboard-seperate">
+                        <div class="dash-left">
+                            <img src="./svg/settings.svg" alt="Setting symbol" srcset="">
+                            <span>Roles</span>
+                        </div>
+                        <div class="dash-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z" fill="#f55353"
+                                /></svg>
+                        </div>
+                    </div>
+                    <div class="corner-line"></div>
+                </div>
+            
+                <div class="special-button">
+                    <div class="dashboard-seperate">
+                        <div class="dash-left">
+                           <img src="./svg/account.svg" alt="Account symbol" srcset="">
+                            <span>Access Rights</span>
+                        </div>
+                        <div class="dash-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z" fill="#f55353"/></svg>
+                        </div>
+                    </div>
+                    <div class="corner-line"></div>
+                </div>
+            </div>
+        </div> 
+
+        <div class="update-section">
+            <p class="install">Install new update 2.3.1A</p>
+            <p>Allow to launch the new update<br>for the AD application</p>
+            <div class="update-buttons">
+                <button class="dismiss-button">
+                    <span>Dismiss</span>
+                </button>
+                <button class="accept-button">
+                    <span>Accept</span>
+                </button>
+            </div>
+        </div>
+    </div>-->
+    
+    <section class="page2">
+        <!-- Roles/Employees section -->
+        <section class="add-employee1">
+            <div class="add-employee-conetentpart">
+                <div class="add-role-heading">
+                    Roles
+                </div>
+                <span>All the roles are configured here</span>
+            </div>
+            
+            <button class="add-role-button" onclick=ShowAddRolePage()>
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" fill="#ffffff"/></svg>
+                ADD ROLE
+            </button>    
+        </section>
+        
+        <!-- Filter section -->
+        <section class="filterrole">
+            <div class="filterrole-left">
+                <div class="filterrole-icon">
+                    <span>Filter</span>
+                    <img src="./images/s3filter.png" width="15px" height="15px" alt="Filter icon">
+                </div>
+                <div class="department-selection">
+                    <select name="departments" id="departments">
+                        <option value="Department" selected>Department</option>
+                        <option value="IT">IT</option>
+                        <option value="ProductEngg">Product Engg.</option>
+                        <option value="UIUX">UIUX</option>
+                    </select>
+                </div>
+                <div class="location-selection">
+                    <select name="location" id="location">
+                        <option value="location">Location</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Delhi">Delhi</option>
+                    </select>
+                </div>
+            </div>
+            <div class="filterrole-right">
+                <button class="role-reset-button" onclick=ShowAllCards()>
+                    Reset
+                </button>
+                <button class="role-apply-button" onclick=Filter()>
+                    Apply
+                </button>
+            </div>
+        </section>
+
+        <section class="addnewrole-page">
+            <form>    
+                <h4>Create New Role</h4>
+                
+                <div class="row-one">
+                    <div class="text-field">
+                        <label for="role-name">Role Name</label>
+                        <input type="text" name="role-name" id="role-rolename" placeholder="Enter RoleName" required>
+                    </div>
+                    <div class="text-field">
+                        <label for="role-selectdepartment">Department</label>
+                        <select name="department" class="seperate-select" id="role-selectdepartment">
+                            <option value="UIUX">UIUX Designer</option>
+                            <option value="IT">IT</option>
+                            <option value="ProductEngg">Product Engg</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="textarea-section">
+                    <div class="text-field-seperate">
+                        <label for="role-description">Description</label>
+                        <textarea name="description" placeholder="Text" id="role-description" rows="10" cols="67"></textarea>
+                    </div>
+                </div>
+
+                <div class="text-field">
+                    <label for="role-selectlocation">Location</label>
+                    <select name="location" id="role-selectlocation" required>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Delhi">Delhi</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="">Assign employees</label>
+                    <div class="search-dropdown">
+                        <input type="text" name="searchemp" id="searchemp" placeholder="Search for an employee">
+                        <span id="searchPlaceholder"></span>
+                        <img src="./images/arrowdown.png" alt="Arrowdown symbol" width="10px" height="10px" onclick=ShowFieldDropdown()>
+                    </div>
+
+                    <div class="checkbox-dropdownlist">
+                        <div class="checkbox-items">
+                            <div class="checkbox-items-left">
+                                <img src="./images/man.jpg" alt="Human image" class="dropdown-profile">
+                                <span>Rahul Sivapuram</span>
+                            </div>
+                            <input type="checkbox" value="Rahul Sivapuram" name="dp-empdetails"  id="dp-empdetails">
+                        </div>
+                        <div class="checkbox-items">
+                            <div class="checkbox-items-left">
+                                <img src="./images/man.jpg" alt="Human image" class="dropdown-profile">
+                                <span>John Doe</span>
+                            </div>
+                            <input type="checkbox" value="John Doe" name="dp-empdetails"  id="dp-empdetails">
+                        </div>
+                        <div class="checkbox-items">
+                            <div class="checkbox-items-left">
+                                <img src="./images/man.jpg" alt="Human image" class="dropdown-profile">
+                                <span>Eric</span>
+                            </div>
+                            <input type="checkbox" value="Eric" name="dp-empdetails"  id="dp-empdetails">
+                        </div>
+                        <div class="checkbox-items">
+                            <div class="checkbox-items-left">
+                                <img src="./images/man.jpg" alt="Human image" class="dropdown-profile">
+                                <span>Alex Pearson</span>
+                            </div>
+                            <input type="checkbox" value="Alex Pearson" name="dp-empdetails"  id="dp-empdetails">
+                        </div>
+                    </div>
+                </div>
+                <div class="role-buttons">
+                    <button class="role-dismiss-button">
+                        <span>Dismiss</span>
+                    </button>
+                    <button class="role-accept-button" type="submit" onclick=AddRoleData()>
+                        <span>Accept</span>
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Info card list section -->
+        <section class="info-cards-list">
+        </section>
+    </section>
+
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
+
+<!--
+<div class="info-card">
+    <div class="info-row">
+        <h5>Senior Developer</h5>
+        <img src="./svg/blueeditbox.svg" alt="BlueColor EditBox">
+    </div>
+    <div class="info-row">
+        <div class="infocard-items">    
+          <img src="./svg/group.svg" alt="GroupPeople symbol">
+            <span>Department</span>
+        </div>
+        <span>UIUX</span>
+    </div>
+    <div class="info-row">
+        <div class="infocard-items">
+          <img src="./svg/location.svg" alt="Location symbol">
+            <span>location</span>
+        </div>
+        <span>Hyderabad</span>
+    </div>
+    <div class="info-row">
+        <span>Total Employees</span>
+        <div class="profiles-many">
+            <div class="img1"><img src="./images/avatar.png" alt="Human avatar" srcset="" height="20px" width="20px"></div>
+            <div class="img2"><img src="./images/avatar.png" alt="Human avatar" srcset="" height="20px" width="20px"></div>
+            <div class="img3"><img src="./images/gamer.png" alt="Human avatar" srcset="" height="20px" width="20px"></div>      
+            <div class="employee-count"><span>+43</span></div> 
+        </div>
+    </div>
+    <div class="arrow-item">
+    
+        <div>
+            <span>View all Employees</span>
+            <img src="./svg/arrow.svg" alt="Arrow symbol">                     
+        </div>
+    </div>
+</div> -->
