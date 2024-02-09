@@ -8,33 +8,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-    
 </head>
 <body>
     <!-- Navbar -->
     <div class="navbar">
-        <div onclick=ShowSidebar() class="menu">
-            <img src="./images/handle.png" alt="" srcset="" class="hamburger">
+        <div onclick=showSidebar() class="menu">
+            <img src="assets/images/handle.png" alt="Arrow menu" srcset="" class="hamburger">
         </div>
         
         <div class="header-searchbar">
             <div class="search-field">
-                <img src="./images/bxsearch.png" alt="Search symbol">
+                <img src="assets/images/bxsearch.png" alt="Search symbol">
                 <input type="search" name="search"  id="search" placeholder="Search (Ctrl+/)" class="search-box">
             </div>
             <div class="profile">
-                <img src="./images/chineese.png" alt="Chineese symbol" srcset="">
-                <img src="./images/icon1.png" alt="Menu symbol" srcset="">
-                <img src="./images/icon2.png" alt="Moon symbol" srcset="">
-                <img src="./images/icon3.png" alt="Bell symbol" srcset="">                         
+                <img src="assets/images/chineese.png" alt="Chineese symbol" srcset="">
+                <img src="assets/images/icon1.png" alt="Menu symbol" srcset="">
+                <img src="assets/images/icon2.png" alt="Moon symbol" srcset="">
+                <img src="assets/images/icon3.png" alt="Bell symbol" srcset="">                         
             </div>
             <div class="profile-box">
                 <div class="man">
-                    <img src="./images/man.jpg" alt="Human avatar" srcset="">
+                    <img src="assets/images/man.jpg" alt="Human avatar" srcset="">
                     <div class="green-dot"></div>
                 </div>
                 <span>John Abraham<br><span class="span-inside">Admin</span></span>
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                <img src="assets/svg/arrowdown.svg" alt="Dropdown icon" srcset="">
             </div>   
         </div>
     </div>
@@ -43,31 +42,31 @@
     <div class="sidebar">
         <div class="sidebar-toppart">
             <div class="logo-arrow">
-                <img src="./images/tezo.png" alt="Tezo logo" class="logo">  
-                <img src="./images/handle.png" alt="Back button" class="backbutton" onclick=HideSidebar()>     
+                <img src="assets/images/tezo.png" alt="Tezo logo" class="logo">  
+                <img src="assets/images/handle.png" alt="Back button" class="backbutton" onclick=hideSidebar()>     
             </div>     
             <div class="sidebar-buttons">
                 <h3 class="heading">ALL</h3>
                 <div class="special-button">
                     <div class="dashboard-seperate">
                         <div class="dash-left">
-                            <img src="./svg/dashboard.svg" alt="Dashboard symbol" srcset="">
+                            <img src="assets/svg/dashboard.svg" alt="Dashboard symbol" srcset="">
                             <span>Dashboard</span>
                         </div>
                         <div class="dash-right">
-                            <img src="./svg/arrowforward.svg" alt="Arrow symbol">
+                            <img src="assets/svg/arrowforward.svg" alt="Arrow symbol">
                         </div>
                     </div>
                     <div class="corner-line"></div>
                 </div>
-                <div class="special-button" onclick=ShowDropDown()>
+                <div class="special-button" onclick=showDropDown()>
                     <div class="dashboard-seperate">
                         <div class="dash-left">
-                            <img src="./svg/employees.svg" alt="Employees symbol" srcset="">
+                            <img src="assets/svg/employees.svg" alt="Employees symbol" srcset="">
                             <span class="employee-seperate">Employees</span>
                         </div>
-                        <div class="dash-seperate-right" onclick=ShowEmp()>
-                            <img src="./svg/arrowforward.svg" alt="Arrow symbol" class="arrow">
+                        <div class="dash-seperate-right" onclick=showEmp()>
+                            <img src="assets/svg/arrowforward.svg" alt="Arrow symbol" class="arrow">
                         </div>
                     </div>
                     <div class="corner-line"></div>
@@ -75,37 +74,37 @@
             
                 <ul class="userstatus-menu">
                     <li>
-                        <div class="department-button-left" onclick=ShowTableRows()>
-                            <div class="greydot"></div>
+                        <div class="department-button-left" onclick=showTableRows()>
+                            <div class="grey-dot"></div>
                             <span>All</span>
                         </div>
                     </li>
                     <li>
-                        <div class="department-button-left" onclick="ShowActiveUsers('Active')">
-                            <div class="greydot"></div>
+                        <div class="department-button-left" onclick="showActiveUsers('Active')">
+                            <div class="grey-dot"></div>
                             <span>Active</span>
                         </div>
                     </li>
                     <li>
-                        <div class="department-button-left" onclick=ShowInActiveUsers()>
-                            <div class="greydot"></div>
+                        <div class="department-button-left" onclick=showInActiveUsers()>
+                            <div class="grey-dot"></div>
                             <span>InActive</span>
                         </div>
                     </li>
                     <br>
                     <h3 class="sep-heading" style="margin-left: .5rem;">DEPARTMENTS</h3>
-                    <div class="department-button" onclick="ShowDepartmentWise('IT')">
+                    <div class="department-button" onclick="showDepartmentWise('IT')">
                         <div class="department-button-left">
-                            <div class="greydot"></div>
+                            <div class="grey-dot"></div>
                             IT
                         </div>
                         <div class="department-button-square">
                             3
                         </div>
                     </div>
-                    <div class="department-button" onclick="ShowDepartmentWise('UIUX')">
+                    <div class="department-button" onclick="showDepartmentWise('UIUX')">
                         <div class="department-button-left">
-                            <div class="greydot"></div>
+                            <div class="grey-dot"></div>
                             UI/UX
                         </div>
                         <div class="department-button-square">
@@ -113,8 +112,8 @@
                         </div>
                     </div>
                     <div class="department-button">
-                        <div class="department-button-left" onclick="ShowDepartmentWise('ProductEngg')">
-                            <div class="greydot"></div>
+                        <div class="department-button-left" onclick="showDepartmentWise('ProductEngg')">
+                            <div class="grey-dot"></div>
                             Product Engg
                         </div>
                         <div class="department-button-square">
@@ -129,11 +128,11 @@
             <div class="special-button">
                 <div class="dashboard-seperate">
                     <div class="dash-left">
-                        <img src="./svg/settingsblack.svg" alt="Setting symbol" srcset="">
+                        <img src="assets/svg/settingsblack.svg" alt="Setting symbol" srcset="">
                         <span>Roles</span>
                     </div>
                     <div class="dash-right">
-                        <img src="./svg/arrowforward.svg" alt="Arrow symbol" class="arrow" onclick=ShowRole()>
+                        <img src="assets/svg/arrowforward.svg" alt="Arrow symbol" class="arrow" onclick=showRole()>
                     </div>
                 </div>
                 <div class="corner-line"></div>
@@ -142,11 +141,11 @@
             <div class="special-button">
                 <div class="dashboard-seperate">
                     <div class="dash-left">
-                       <img src="./svg/account.svg" alt="Account symbol" srcset="">
+                       <img src="assets/svg/account.svg" alt="Account symbol" srcset="">
                         <span>Access Rights</span>
                     </div>
                     <div class="dash-right">
-                        <img src="./svg/arrowforward.svg" alt="Arrow symbol" class="arrow">
+                        <img src="assets/svg/arrowforward.svg" alt="Arrow symbol" class="arrow">
                     </div>
                 </div>
                 <div class="corner-line"></div>
@@ -170,14 +169,14 @@
     </div>
 
     <div class="small-sidebar">
-        <img src="./svg/dashboard.svg" alt="" height="40px" width="30px">
-        <img src="./svg/employees.svg" alt="" height="40px" width="30px">
-        <img src="./svg/settingsgrey.svg" alt="" height="40px" width="30px">
-        <img src="./svg/account.svg" alt="" height="40px" width="30px">
+        <img src="assets/svg/dashboard.svg" alt="Arrow icon" height="40px" width="30px">
+        <img src="assets/svg/employees.svg" alt="GroupOfEmployees icon" height="40px" width="30px">
+        <img src="assets/svg/settingsgrey.svg" alt="Settings icon" height="40px" width="30px">
+        <img src="assets/svg/account.svg" alt="Account icon" height="40px" width="30px">
     </div>
     
     <!-- Employee Page -->
-    <section class="page1">
+    <section class="employee-page">
         <!-- Add-Employee Section -->
         <section class="add-employee">
             <div class="add-employee-conetentpart">
@@ -186,12 +185,12 @@
             </div>
             
             <div class="add-employee-buttons">
-                <button class="export-button" onclick=AddToExcel()>
-                    <img src="./images/upload.png" alt="Upload image" srcset="">
+                <button class="export-button" onclick=addToExcel()>
+                    <img src="assets/images/upload.png" alt="Upload image" srcset="">
                     EXPORT
                 </button>
-                <button class="add-employee-button" onclick=ShowAddEmployeePage()>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" fill="#ffffff"/></svg>
+                <button class="add-employee-button" onclick=showAddEmployeePage()>
+                    <img src="assets/svg/pluswhite.svg" alt="Plus icon" srcset="">
                 ADD EMPLOYEEE
                 </button>    
             </div>
@@ -202,27 +201,26 @@
             <form>
                 <h4>Add Employee</h4>
                 <div class="upload-pic">
-                    <img src="./images/profile-user.png" alt="Profile symbol" class="profilepic" width="64px" height="64px">
+                    <img src="assets/images/profile-user.png" alt="Profile symbol" class="profilepic" width="64px" height="64px">
                     <label for="addfilepicker" class="add-uploadpic">Upload Profile Pic</label> 
                     <input type="file"  id="addfilepicker" accept="image/*">
                 </div>
 
                 <h5>Personal Information</h5>
-                
                 <div class="text-field">
                     <label for="emp-number">Emp No</label>
-                    <input type="text" name="emp-number" id="emp-number" placeholder="Enter your Employee No"  onfocus="this.style.borderColor = 'blue';" required>
+                    <input type="text" name="emp-number" id="emp-number" placeholder="Enter your Employee Number"  onfocus="this.style.borderColor = '#4c9aff';" required>
                 </div>
 
                 <div class="emp-details">
                     <div class="text-field">
                         <label for="first-name">First Name</label>
-                        <input type="text" name="first-name" id="first-name" placeholder="Enter your firstname" onfocus="this.style.borderColor = 'blue';" required>
+                        <input type="text" name="first-name" id="first-name" placeholder="Enter Your FirstName" onfocus="this.style.borderColor = '#4c9aff';" required>
                     </div>
                     
                     <div class="text-field">
-                            <label for="last-name">Last Name</label>
-                            <input type="text" name="last-name" id="last-name" placeholder="Enter your Lastname" onfocus="this.style.borderColor = 'blue';" required>
+                        <label for="last-name">Last Name</label>
+                        <input type="text" name="last-name" id="last-name" placeholder="Enter Your LastName" onfocus="this.style.borderColor = '#4c9aff';" required>
                     </div>
 
                     <div class="text-field">
@@ -232,16 +230,15 @@
 
                     <div class="text-field">
                         <label for="email-id">Email Id</label>
-                        <input type="email" name="email-id" id="email-id" placeholder="Enter your gmail" onfocus="this.style.borderColor = 'blue';" required>
+                        <input type="email" name="email-id" id="email-id" placeholder="Enter your gmail" onfocus="this.style.borderColor = '#4c9aff';" required>
                     </div>
                     <div class="text-field">
                         <label for="mobile-number">Mobile Number</label>
-                        <input type="tel" name="mobile-no" id="mobile-no" placeholder="Enter your MobileNo" onfocus="this.style.borderColor = 'blue';" required>
+                        <input type="tel" name="mobile-no" id="mobile-no" placeholder="Enter your MobileNo" onfocus="this.style.borderColor = '#4c9aff';" required>
                     </div>
                 </div>
                 
                 <h5>Employement Information</h5>
-                
                 <div class="emp-info">
                     <div class="text-field-long">
                         <label for="joining-date">Joining Date</label>
@@ -293,94 +290,93 @@
                     <button class="add-dismiss-button">
                         <span>Dismiss</span>
                     </button>
-                    <button class="add-accept-button" type="submit" onclick=AddEmployeeData()>
+                    <button class="add-accept-button" type="submit" onclick=addEmployeeData()>
                         <span>Accept</span>
                     </button>
                 </div>
             </form>
-            
         </section>
 
         <section class="table-part">
             <!--Filter By Alphabet Section -->
             <section class="filter">
-                <img src="./images/filterblack.png" alt="Filter icon" class="filter-image" onclick="FilterSection()">
-                <div class="alphabet" onclick="FilterByAlphabet('A')">
+                <img src="assets/images/filterblack.png" alt="Filter icon" class="filter-image" onclick="filterSection()">
+                <div class="alphabet" onclick="filterByAlphabet('A')">
                     <span>A</span>
                 </div>
-                <div class="alphabet" onclick="FilterByAlphabet('B')">
+                <div class="alphabet" onclick="filterByAlphabet('B')">
                     <span>B</span>
                 </div>
-                <div class="alphabet" onclick="FilterByAlphabet('C')">
+                <div class="alphabet" onclick="filterByAlphabet('C')">
                     <span>C</span>
                 </div>
-                <div class="alphabet" onclick="FilterByAlphabet('D')">
+                <div class="alphabet" onclick="filterByAlphabet('D')">
                     <span>D</span>
                 </div>
-                <div class="alphabet" onclick="FilterByAlphabet('E')">
+                <div class="alphabet" onclick="filterByAlphabet('E')">
                     <span>E</span>
                 </div>
-                <div class="alphabet" onclick="FilterByAlphabet('F')">
+                <div class="alphabet" onclick="filterByAlphabet('F')">
                     <span>F</span>
                 </div>
-                <div class="alphabet" onclick="FilterByAlphabet('G')">
+                <div class="alphabet" onclick="filterByAlphabet('G')">
                     <span>G</span>
                 </div>
-                <div class="alphabet" onclick="FilterByAlphabet('H')">
+                <div class="alphabet" onclick="filterByAlphabet('H')">
                     <span>H</span>
                 </div>
-                <div class="alphabet" onclick="FilterByAlphabet('I')">
+                <div class="alphabet" onclick="filterByAlphabet('I')">
                     <span>I</span>
                 </div>
-                <div class="alphabet" onclick="FilterByAlphabet('J')">
+                <div class="alphabet" onclick="filterByAlphabet('J')">
                     <span>J</span>
                 </div>
-                <div class="alphabet" onclick="FilterByAlphabet('K')">
+                <div class="alphabet" onclick="filterByAlphabet('K')">
                     <span>K</span>
                 </div>
-                <div class="alphabet" onclick="FilterByAlphabet('L')">
+                <div class="alphabet" onclick="filterByAlphabet('L')">
                     <span>L</span>
                 </div>
-                <div class="alphabet" onclick="FilterByAlphabet('M')">
+                <div class="alphabet" onclick="filterByAlphabet('M')">
                     <span>M</span>
                 </div>
-                <div class="alphabet" onclick="FilterByAlphabet('N')">
+                <div class="alphabet" onclick="filterByAlphabet('N')">
                     <span>N</span>
                 </div>
-                <div class="alphabet" onclick="FilterByAlphabet('O')">
+                <div class="alphabet" onclick="filterByAlphabet('O')">
                     <span>O</span>
                 </div>
                 <div class="alphabet" onclick="FilterByAlphabet('P')">
                     <span>P</span>
                 </div>
-                <div class="alphabet" onclick="FilterByAlphabet('Q')">
+                <div class="alphabet" onclick="filterByAlphabet('Q')">
                     <span>Q</span>
                 </div>
-                <div class="alphabet" onclick="FilterByAlphabet('R')">
+                <div class="alphabet" onclick="filterByAlphabet('R')">
                     <span>R</span>
                 </div>
-                <div class="alphabet" onclick="FilterByAlphabet('S')">
+                <div class="alphabet" onclick="filterByAlphabet('S')">
                     <span>S</span>
                 </div>
-                <div class="alphabet" onclick="FilterByAlphabet('T')">
+                <div class="alphabet" onclick="filterByAlphabet('T')">
                     <span>T</span>
                 </div>
-                <div class="alphabet" onclick="FilterByAlphabet('U')">
+                <div class="alphabet" onclick="filterByAlphabet('U')">
                     <span>U</span>
                 </div>
-                <div class="alphabet" onclick="FilterByAlphabet('V')">
+                <div class="alphabet" onclick="filterByAlphabet('V')">
                     <span>V</span>
                 </div>
-                <div class="alphabet" onclick="FilterByAlphabet('W')">
+                <div class="alphabet" onclick="filterByAlphabet('W')">
                     <span>W</span>
                 </div>
-                <div class="alphabet" onclick="FilterByAlphabet('X')">
+                <div class="alphabet" onclick="filterByAlphabet('X')">
                     <span>X</span>
                 </div>
-                <div class="alphabet" onclick="FilterByAlphabet('Y')">
+                <div class="alphabet" onclick="filterByAlphabet('Y')">
                     <span>Y</span>
                 </div>
-                <div class="alphabet" onclick="FilterByAlphabet('Z')">
+                <div class="alphabet" onclick="filterByAlphabet('Z')">
                     <span>Z</span>
                 </div>
             </section>
@@ -390,13 +386,13 @@
                 <div class="filter-left">
                     <div class="filter-icon">
                         <span>Filter</span>
-                        <img src="./images/s3filter.png" width="15px" height="15px" alt="Filter icon">
+                        <img src="assets/images/s3filter.png" width="15px" height="15px" alt="Filter icon">
                     </div>
                     
                     <!--button-->
                     <div class="filter-dropdown">
                         <span id="filter-display1">Status</span>
-                        <img src="./images/arrowdown.png" alt="Arrowdown symbol" width="10px" height="10px" onclick=ShowFilterStatusDropdown()>
+                        <img src="assets/images/arrowdown.png" alt="Arrowdown symbol" width="10px" height="10px" onclick=showFilterStatusDropdown()>
                     </div>
                     <div class="filtercheckbox-dropdownlist">
                         <div class="checkbox-items">
@@ -412,7 +408,7 @@
                 
                     <div class="filter-dropdown">
                         <span id="filter-display2">Department</span>
-                        <img src="./images/arrowdown.png" alt="Arrowdown symbol" width="10px" height="10px" onclick=ShowFilterDepartmentDropdown()>
+                        <img src="assets/images/arrowdown.png" alt="Arrowdown symbol" width="10px" height="10px" onclick=showFilterDepartmentDropdown()>
                     </div>
                     <div class="filtercheckbox-dropdownlist2">
                         <div class="checkbox-items">
@@ -431,7 +427,7 @@
 
                     <div class="filter-dropdown">
                         <span id="filter-display3">Location</span>
-                        <img src="./images/arrowdown.png" alt="Arrowdown symbol" width="10px" height="10px" onclick=ShowFilterLocationDropdown()>
+                        <img src="assets/images/arrowdown.png" alt="Arrowdown symbol" width="10px" height="10px" onclick=showFilterLocationDropdown()>
                     </div>
                     <div class="filtercheckbox-dropdownlist3">
                         <div class="checkbox-items">
@@ -454,10 +450,10 @@
                 </div>
 
                 <div class="filter-right" >
-                    <button class="reset-button" onclick=ShowTableRows()>
+                    <button class="reset-button" onclick=showTableRows()>
                         <span>Reset</span>
                     </button>
-                    <button class="apply-button" type="submit" onclick=FilterTableRows()>
+                    <button class="apply-button" type="submit" onclick=filterTableRows()>
                         <span>Apply</span>
                     </button>
                 </div>
@@ -467,15 +463,15 @@
             <section class="user-section">
                 <div class="delete-add-row">
                     <div class="arrow-down">
-                        <img src="./images/downarrow.png" alt="Downarrow image" srcset="">
+                        <img src="assets/images/downarrow.png" alt="Downarrow image" srcset="">
                         <div class="delete-button">
                             <span>Delete</span>
                         </div>
                     </div>
-                    <img src="./images/tableadd.png" alt="Addtable image" srcset="">
+                    <img src="assets/images/tableadd.png" alt="Addtable image" srcset="">
                 </div>
                 <br>
-                <table id="myTable">
+                <table id="UserTable">
                     <thead>
                         <th>
                             <input type="radio" name="checkbox1" id="checkbox1"><label for="sample"></label>
@@ -484,8 +480,8 @@
                             <div class="inside-labels-user">
                                 <span>USER</span>
                                 <div class="arrow-sort-filter" >                            
-                                    <img src="./images/caretarrowup.png" alt="upward and downward arrow" height="7px" width="7px" onclick="SortAccordToCol('USER')">
-                                    <img src="./images/caretdown.png" alt="arrowdown symbol" height="7px" width="7px" onclick="SortDecToCol('USER')">
+                                    <img src="assets/images/caretarrowup.png" alt="upward and downward arrow" height="7px" width="7px" onclick="sortAccordToCol('USER')">
+                                    <img src="assets/images/caretdown.png" alt="arrowdown symbol" height="7px" width="7px" onclick="sortDecToCol('USER')">
                                 </div>
                             </div>
                         </th>
@@ -493,8 +489,8 @@
                             <div class="inside-labels-user">
                                 <span>LOCATION</span>
                                 <div class="arrow-sort-filter">                            
-                                    <img src="./images/caretarrowup.png" alt="upward and downward arrow" height="7px" width="7px"  onclick="SortAccordToCol('LOCATION')">
-                                    <img src="./images/caretdown.png" alt="arrowdown symbol" height="7px" width="7px" onclick="SortDecToCol('LOCATION')">
+                                    <img src="assets/images/caretarrowup.png" alt="upward and downward arrow" height="7px" width="7px"  onclick="sortAccordToCol('LOCATION')">
+                                    <img src="assets/images/caretdown.png" alt="arrowdown symbol" height="7px" width="7px" onclick="sortDecToCol('LOCATION')">
                                 </div>
                             </div>
                         </th>
@@ -502,8 +498,8 @@
                             <div class="inside-labels-user">
                                 <span>DEPARTMENT</span>
                                 <div class="arrow-sort-filter" >                            
-                                    <img src="./images/caretarrowup.png" alt="upward and downward arrow" height="7px" width="7px" onclick="SortAccordToCol('DEPARTMENT')">
-                                    <img src="./images/caretdown.png" alt="arrowdown symbol" height="7px" width="7px" onclick="SortDecToCol('DEPARTMENT')">
+                                    <img src="assets/images/caretarrowup.png" alt="upward and downward arrow" height="7px" width="7px" onclick="sortAccordToCol('DEPARTMENT')">
+                                    <img src="assets/images/caretdown.png" alt="arrowdown symbol" height="7px" width="7px" onclick="sortDecToCol('DEPARTMENT')">
                                 </div>
                             </div>
                         </th>
@@ -511,8 +507,8 @@
                             <div class="inside-labels-user">
                                 <span>ROLE</span>
                                 <div class="arrow-sort-filter" >                            
-                                    <img src="./images/caretarrowup.png" alt="upward and downward arrow" height="7px" width="7px" onclick="SortAccordToCol('ROLE')">
-                                    <img src="./images/caretdown.png" alt="arrowdown symbol" height="7px" width="7px" onclick="SortDecToCol('ROLE')">
+                                    <img src="assets/images/caretarrowup.png" alt="upward and downward arrow" height="7px" width="7px" onclick="sortAccordToCol('ROLE')">
+                                    <img src="assets/images/caretdown.png" alt="arrowdown symbol" height="7px" width="7px" onclick="sortDecToCol('ROLE')">
                                 </div>
                             </div>
                         </th>
@@ -520,8 +516,8 @@
                             <div class="inside-labels-user">
                                 <span>EMP NO</span>
                                 <div class="arrow-sort-filter" >                            
-                                    <img src="./images/caretarrowup.png" alt="upward and downward arrow" height="7px" width="7px" onclick="SortAccordToCol('EMPNO')">
-                                    <img src="./images/caretdown.png" alt="arrowdown symbol" height="7px" width="7px" onclick="SortDecToCol('EMPNO')">
+                                    <img src="assets/images/caretarrowup.png" alt="upward and downward arrow" height="7px" width="7px" onclick="sortAccordToCol('EMPNO')">
+                                    <img src="assets/images/caretdown.png" alt="arrowdown symbol" height="7px" width="7px" onclick="sortDecToCol('EMPNO')">
                                 </div>
                             </div>
                         </th>
@@ -529,8 +525,8 @@
                             <div class="inside-labels-user">
                                 <span>STATUS</span>
                                 <div class="arrow-sort-filter" >                            
-                                    <img src="./images/caretarrowup.png" alt="upward and downward arrow" height="7px" width="7px" onclick="SortAccordToCol('STATUS')">
-                                    <img src="./images/caretdown.png" alt="arrowdown symbol" height="7px" width="7px" onclick="SortDecToCol('STATUS')">
+                                    <img src="assets/images/caretarrowup.png" alt="upward and downward arrow" height="7px" width="7px" onclick="sortAccordToCol('STATUS')">
+                                    <img src="assets/images/caretdown.png" alt="arrowdown symbol" height="7px" width="7px" onclick="sortDecToCol('STATUS')">
                                 </div>
                             </div>
                         </th>
@@ -538,13 +534,13 @@
                             <div class="inside-labels-user">
                                 <span>JOIN DT</span>
                                 <div class="arrow-sort-filter" >                            
-                                    <img src="./images/caretarrowup.png" alt="upward and downward arrow" height="7px" width="7px" onclick="SortAccordToCol('JOINDT')">
-                                    <img src="./images/caretdown.png" alt="arrowdown symbol" height="7px" width="7px" onclick="SortDecToCol('JOINDT')">
+                                    <img src="assets/images/caretarrowup.png" alt="upward and downward arrow" height="7px" width="7px" onclick="sortAccordToCol('JOINDT')">
+                                    <img src="assets/images/caretdown.png" alt="arrowdown symbol" height="7px" width="7px" onclick="sortDecToCol('JOINDT')">
                                 </div>
                             </div>
                         </th>
                         <th>
-                            <img src="./svg/threedots.svg" alt="Threedots symbol">
+                            <img src="assets/svg/threedots.svg" alt="Threedots symbol">
                         </th>
                     </thead>
                     <tbody>
@@ -556,20 +552,20 @@
     </section>
 
     <!-- Role Page -->
-    <section class="page4">
+    <section class="role-page">
         <!-- Roles/Employees section -->
         <section class="add-role">
             <div class="add-employee-conetentpart">
-                <div class="add-emp-heading" onclick=ShowRole()>
+                <div class="add-emp-heading" onclick=showRole()>
                     Roles
-                <img src="./svg/arrowforwardviolet.svg" alt="Arrow symbol">
+                <img src="assets/svg/arrowforwardviolet.svg" alt="Arrow symbol">
                     Employees
                 </div>
                 <span>All the roles are configured here</span>
             </div>
             
             <button class="add-employee-button">
-            <img src="./svg/pluswhite.svg" alt="PLus symbol" srcset="">
+            <img src="assets/svg/pluswhite.svg" alt="PLus symbol" srcset="">
                 ADD EMPLOYEEE
             </button>    
         </section>
@@ -585,7 +581,7 @@
     </section>
 
     <!-- Role Details Page -->
-    <section class="page2">
+    <section class="roledetails-page">
         <!-- Roles/Employees section -->
         <section class="add-roledetails">
             <div class="add-employee-conetentpart">
@@ -595,7 +591,7 @@
                 <span>All the roles are configured here</span>
             </div>
             
-            <button class="add-role-button" onclick=ShowAddRolePage()>
+            <button class="add-role-button" onclick=showAddRolePage()>
                 <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" fill="#ffffff"/></svg>
                 ADD ROLE
             </button>    
@@ -606,7 +602,7 @@
             <div class="filterrole-left">
                 <div class="filterrole-icon">
                     <span>Filter</span>
-                    <img src="./images/s3filter.png" width="15px" height="15px" alt="Filter icon">
+                    <img src="assets/images/s3filter.png" width="15px" height="15px" alt="Filter icon">
                 </div>
                 <div class="department-selection">
                     <select name="departments" id="role-departments">
@@ -626,10 +622,10 @@
                 </div>
             </div>
             <div class="filterrole-right">
-                <button class="role-reset-button" onclick=ShowAllCards()>
+                <button class="role-reset-button" onclick=showAllCards()>
                     Reset
                 </button>
-                <button class="role-apply-button" onclick=Filter()>
+                <button class="role-apply-button" onclick=filter()>
                     Apply
                 </button>
             </div>
@@ -675,34 +671,34 @@
                     <div class="search-dropdown">
                         <input type="text" name="searchemp" id="searchemp" placeholder="Search for an employee">
                         <span id="searchPlaceholder"></span>
-                        <img src="./images/arrowdown.png" alt="Arrowdown symbol" width="10px" height="10px" onclick=ShowFieldDropdown()>
+                        <img src="assets/images/arrowdown.png" alt="Arrowdown symbol" width="10px" height="10px" onclick=showFieldDropdown()>
                     </div>
 
                     <div class="checkbox-dropdownlist">
                         <div class="checkbox-items">
                             <div class="checkbox-items-left">
-                                <img src="./images/man.jpg" alt="Human image" class="dropdown-profile">
+                                <img src="assets/images/man.jpg" alt="Human image" class="dropdown-profile">
                                 <span>Rahul Sivapuram</span>
                             </div>
                             <input type="checkbox" value="Rahul Sivapuram" name="dp-empdetails"  id="dp-empdetails">
                         </div>
                         <div class="checkbox-items">
                             <div class="checkbox-items-left">
-                                <img src="./images/man.jpg" alt="Human image" class="dropdown-profile">
+                                <img src="assets/images/man.jpg" alt="Human image" class="dropdown-profile">
                                 <span>John Doe</span>
                             </div>
                             <input type="checkbox" value="John Doe" name="dp-empdetails"  id="dp-empdetails">
                         </div>
                         <div class="checkbox-items">
                             <div class="checkbox-items-left">
-                                <img src="./images/man.jpg" alt="Human image" class="dropdown-profile">
+                                <img src="assets/images/man.jpg" alt="Human image" class="dropdown-profile">
                                 <span>Eric</span>
                             </div>
                             <input type="checkbox" value="Eric" name="dp-empdetails"  id="dp-empdetails">
                         </div>
                         <div class="checkbox-items">
                             <div class="checkbox-items-left">
-                                <img src="./images/man.jpg" alt="Human image" class="dropdown-profile">
+                                <img src="assets/images/man.jpg" alt="Human image" class="dropdown-profile">
                                 <span>Alex Pearson</span>
                             </div>
                             <input type="checkbox" value="Alex Pearson" name="dp-empdetails"  id="dp-empdetails">
@@ -713,7 +709,7 @@
                     <button class="role-dismiss-button">
                         <span>Dismiss</span>
                     </button>
-                    <button class="role-accept-button" type="submit" onclick=AddRoleData()>
+                    <button class="role-accept-button" type="submit" onclick=addRoleData()>
                         <span>Accept</span>
                     </button>
                 </div>
@@ -726,41 +722,5 @@
     </section>
     
     <script src="./scripts/script.js"></script>
-    <script src="./scripts/navigation.js"></script>
 </body>
-</html>
-
-
-
-
-
-
-
-
-
-<!--
-                    
-                    <div class="filter-dropdown">
-                        <span id="locationPlaceholder">Location</span>
-                        <img src="./images/arrowdown.png" alt="Arrowdown symbol" width="10px" height="10px" onclick=ShowFilterFieldDropdown()>
-                    </div>
-                    <div class="location-selection" id="location-selection" style="display: none;">
-                        <div class="checkbox-items">
-                            <span>Hyderabad</span>
-                            <input type="checkbox" value="Hyderabad" name="location" id="location-Hyderabad">
-                        </div>
-                        <div class="checkbox-items">
-                            <span>Mumbai</span>
-                            <input type="checkbox" value="Mumbai" name="location" id="location-Mumbai">
-                        </div>
-                        <div class="checkbox-items">
-                            <span>Pune</span>
-                            <input type="checkbox" value="Pune" name="location" id="location-Pune">
-                        </div>
-                        <div class="checkbox-items">
-                            <span>Delhi</span>
-                            <input type="checkbox" value="Delhi" name="location" id="location-Delhi">
-                        </div>
-                    </div>
-        <iframe id="iframeContent" src="index3.html" style="display: none ; border: none; padding: 0;"></iframe>
--->
+</html>     

@@ -3,7 +3,7 @@ body{
     font-family: 'Roboto', sans-serif;
     margin-top: .5rem;    
 }
-.page1, .page2 ,.page4{
+.employee-page, .roledetails-page ,.role-page{
     display: none;
 }
 /* NavBar and Sidebar */
@@ -305,7 +305,7 @@ body{
     color: rgba(166,170,173,255);
     text-decoration: none;
 }
-.greydot{
+.grey-dot{
     height: .5rem;
     width: .5rem;
     background-color: grey;

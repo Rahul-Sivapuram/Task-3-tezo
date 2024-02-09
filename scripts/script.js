@@ -41,7 +41,6 @@ let d =
         "TotalEmployees": "+41"
         }
     ];
-
 let tabledata=[
   {
     "ProfilePic":"",
@@ -203,109 +202,87 @@ let users = [
       "userdepartment": "human research",
       "location": "Michigan"
   }
-];
-
-
-  
-function FilterSection(){
-    const open = document.querySelector(".filter-option");
-    if(open.style.display == "none"){
-        open.style.display = "flex";
+]; 
+function filterSection(){
+    const filteroption = document.querySelector(".filter-option");
+    if(filteroption.style.display == "none"){
+        filteroption.style.display = "flex";
     }
     else{
-        open.style.display = "none";
+        filteroption.style.display = "none";
     }
 }
-function ShowSidebar(){
-    const sd = document.querySelector(".sidebar");
+function showSidebar(){
+    const sidebar = document.querySelector(".sidebar");
     const menu = document.querySelector(".menu");
-    const hd = document.querySelector(".navbar");
-    const hs = document.querySelector(".header-searchbar");
-    const smsd=document.querySelector(".small-sidebar");
-    smsd.style.display="none";
-    sd.style.display = "flex";
+    const navbar = document.querySelector(".navbar");
+    const headersearchbar = document.querySelector(".header-searchbar");
+    const smallsidebar=document.querySelector(".small-sidebar");
+    smallsidebar.style.display="none";
+    sidebar.style.display = "flex";
     menu.style.display = "none";
-    hd.style.marginLeft="12rem";
-    hs.style.marginLeft="1rem";
+    navbar.style.marginLeft="12rem";
+    headersearchbar.style.marginLeft="1rem";
 }
-function HideSidebar(){
-    const sd = document.querySelector(".sidebar");
+function hideSidebar(){
+    const sidebar = document.querySelector(".sidebar");
     const menu = document.querySelector(".menu");
-    const navbar=document.querySelector(".navbar");
-    const hd = document.querySelector(".header-searchbar");
-    const smsd=document.querySelector(".small-sidebar");
-    sd.style.display = "none";
-    menu.style.display="block";
-    smsd.style.display="flex";
-    //menu.style.marginLeft='2rem';
-    hd.style.marginLeft="1rem";
-    navbar.style.marginLeft="1rem"
-    navbar.style.height="";
+    const navbar = document.querySelector(".navbar");
+    const headersearchbar = document.querySelector(".header-searchbar");
+    const smallsidebar = document.querySelector(".small-sidebar");
+    sidebar.style.display = "none";
+    menu.style.display = "block";
+    smallsidebar.style.display = "flex";
+    headersearchbar.style.marginLeft = "1rem";
+    navbar.style.marginLeft = "1rem"
 }
-
-
-/* Roles Section */
-function CreateCard(data){
+function createCard(data){
     let infocard = document.createElement("div");
     infocard.setAttribute("class", "info-card");
-
-    //row1
     let inforow = document.createElement("div");
     var imgelmnt = document.createElement("img");
     var h = document.createElement("h5");
-
     inforow.setAttribute("class", "info-row");
-
     h.innerHTML = data.Role;
-    imgelmnt.src="./svg/blueeditbox.svg";
+    imgelmnt.src="assets/svg/blueeditbox.svg";
     imgelmnt.alt='BlueEditBox symbol';
-
     inforow.appendChild(h);
     inforow.appendChild(imgelmnt);
     infocard.appendChild(inforow);
-
     //row2
     let inforow1 = document.createElement("div");
     let spanins=document.createElement('span');
     var imgelmnt1 = document.createElement("img");
     var span=document.createElement("span");
     let infocarditems=document.createElement("div");
-
     inforow1.setAttribute("class", "info-row");
     infocarditems.setAttribute("class","infocard-items");
-
-    imgelmnt1.src="./svg/group.svg";
+    imgelmnt1.src="assets/svg/group.svg";
     imgelmnt1.alt="Group symbol";
     span.innerText="Department";
     spanins.innerText=data.Department;
-
     inforow1.appendChild(infocarditems);
     infocarditems.appendChild(imgelmnt1);
     infocarditems.appendChild(span);
     inforow1.appendChild(spanins);
     infocard.appendChild(inforow1);
-
     //row3
     let inforow2 = document.createElement("div");
     var spaninside=document.createElement("span");
     var imgelmnt2 = document.createElement("img");
     var span2=document.createElement("span");
     let infocarditems2=document.createElement("div");
-
     inforow2.setAttribute("class", "info-row");
     infocarditems2.setAttribute("class","infocard-items");
-
-    imgelmnt2.src="./svg/location.svg";
+    imgelmnt2.src="assets/svg/location.svg";
     imgelmnt2.alt="Location symbol";
     span2.innerText="Location";
     spaninside.innerText=data.Location;
-
     infocarditems2.appendChild(imgelmnt2);
     infocarditems2.appendChild(span2);
     inforow2.appendChild(infocarditems2);
     inforow2.appendChild(spaninside);
     infocard.appendChild(inforow2);
-
     //row4
     let inforow3=document.createElement('div');
     let span3=document.createElement('span');
@@ -318,20 +295,17 @@ function CreateCard(data){
     let img1=document.createElement('img');
     let img2=document.createElement('img');
     let img3=document.createElement('img');
-
     inforow3.setAttribute('class','info-row');
     div1.setAttribute('class','profiles-many');
     div2.setAttribute('class','img1');
     div3.setAttribute('class','img2');
     div4.setAttribute('class','img3');
     div5.setAttribute('class','employee-count');
-
     span3.innerText="Total Employees";
-    img1.src="./images/avatar.png";
-    img2.src="./images/avatar.png";
-    img3.src="./images/gamer.png";
+    img1.src="assets/images/avatar.png";
+    img2.src="assets/images/avatar.png";
+    img3.src="assets/images/gamer.png";
     span3ins.innerText=data.TotalEmployees;
-
     inforow3.appendChild(span3);
     div2.appendChild(img1);
     div3.appendChild(img2);
@@ -343,74 +317,62 @@ function CreateCard(data){
     div1.appendChild(div5);
     inforow3.appendChild(div1);
     infocard.appendChild(inforow3);
-
     //row5
     let inforow4=document.createElement('div');
     inforow4.setAttribute('class','arrow-item');
     let span4=document.createElement('span');
     let img4=document.createElement('img');
     let div6=document.createElement('div');
-
     span4.innerText="View all Employees";
-    img4.src="./svg/arrow.svg";
+    img4.src="assets/svg/arrow.svg";
     img4.onclick=function(){
-      ShowAllEmp();
+      showAllEmp();
     };
-
     div6.appendChild(span4);
     div6.appendChild(img4);
     inforow4.appendChild(div6);
     infocard.appendChild(inforow4);
-
     return infocard;
 }
-
-function ShowAllCards()
+function showAllCards()
 {
-    let infolist = document.querySelector(".info-cards-list");
-    infolist.innerHTML="";
+    let infocardslist = document.querySelector(".info-cards-list");
+    infocardslist.innerHTML="";
     for(var i in d){
-        var res = CreateCard(d[i]);
-        infolist.appendChild(res);
+        var res =createCard(d[i]);
+        infocardslist.appendChild(res);
     }
 }
-
-function Filter()
+function filter()
 {
-    var sl=document.getElementById("role-location");
-    var sd=document.getElementById("role-departments");
+    var selectedlocation = document.getElementById("role-location");
+    var selecteddepartment = document.getElementById("role-departments");
     let infolist=document.querySelector(".info-cards-list");
-    console.log(sl.value);
-    console.log(sd.value);
     infolist.innerHTML="";
     for(var i in d){
         const doc = d[i];
-        if(doc.Department == sd.value && doc.Location == sl.value)
+        if(doc.Department == selecteddepartment.value && doc.Location == selectedlocation.value)
         {
-            var res=CreateCard(doc);
+            var res=createCard(doc);
             infolist.appendChild(res);
         }
     }
-
-    console.log(infolist);
 }
-
-function ShowDropDown()
+function showDropDown()
 {
     var arrow=document.querySelector(".arrow");
     var dropdown=document.querySelector(".userstatus-menu");
-    arrow.src="./svg/arrowdownorange.svg";
+    arrow.src="assets/svg/arrowdownorange.svg";
     if(dropdown.style.display == "none"){
         dropdown.style.display="block";
     }
     else if(dropdown.style.display="block"){
-        arrow.src="./svg/arrowforwardorange.svg"
+        arrow.src="assets/svg/arrowforwardorange.svg"
         dropdown.style.display="none";
     }
 }
 
-/* Table section */
-function CreateUserRow(data)
+function createUserRow(data)
 {
 var tableRow = document.createElement('tr');
 var radioCell = document.createElement('td');
@@ -423,15 +385,13 @@ labelForRadio.setAttribute('for', 'sample');
 radioCell.appendChild(radioInput);
 radioCell.appendChild(labelForRadio);
 tableRow.appendChild(radioCell);
-
 // Create user profile cell
 var userProfileCell = document.createElement('td');
 userProfileCell.classList.add('user-profile-box');
-
 // Create user avatar image
 var avatarImage = document.createElement('img');
 if(data.ProfilePic == ""){
-  avatarImage.setAttribute('src', './images/man.jpg');
+  avatarImage.setAttribute('src', 'assets/images/man.jpg');
   avatarImage.setAttribute('alt', 'Human Avatar');
 }
 else{
@@ -439,60 +399,48 @@ else{
   avatarImage.setAttribute('alt', 'Human Avatar');
 }
 userProfileCell.appendChild(avatarImage);
-
 // Create user details span
 var userDetailsSpan = document.createElement('span');
 userDetailsSpan.classList.add('span-outside-userprofilebox');
-
 // Add user name and email to details span
 userDetailsSpan.innerHTML = `${data.USER}<br><span class="span-inside-userprofilebox">${data.EMAIL}</span>`;
 userProfileCell.appendChild(userDetailsSpan);
-
 // Add user profile cell to the table row
 tableRow.appendChild(userProfileCell);
-
 // Create and add other cells to the table row
 var locationCell = document.createElement('td');
 locationCell.textContent = data.LOCATION;
 tableRow.appendChild(locationCell);
-
 var departmentCell = document.createElement('td');
 departmentCell.textContent = data.DEPARTMENT;
 tableRow.appendChild(departmentCell);
-
 var roleCell = document.createElement('td');
 roleCell.textContent = data.ROLE;
 tableRow.appendChild(roleCell);
-
 var empNoCell = document.createElement('td');
 empNoCell.textContent = data.EMPNO;
 tableRow.appendChild(empNoCell);
-
 var statusCell = document.createElement('td');
 var activeButton = document.createElement('div');
 activeButton.classList.add('active-button');
 activeButton.innerHTML = `<span>${data.STATUS}</span>`;
 statusCell.appendChild(activeButton);
 tableRow.appendChild(statusCell);
-
 var joinDateCell = document.createElement('td');
 joinDateCell.textContent = data.JOINDT;
 tableRow.appendChild(joinDateCell);
 const id="own-model"+data.USER[0]+data.USER[1];
 var dotsCell = document.createElement('td');
 var dotsImage = document.createElement('img');
-dotsImage.setAttribute('src', './svg/threedots.svg');
+dotsImage.setAttribute('src', 'assets/svg/threedots.svg');
 dotsImage.setAttribute('alt', 'Threedots symbol');
 dotsImage.classList.add("own-model-button"+data.USER[0])
 dotsImage.onclick=function() {
   console.log(id);
   show3dots(id);
 };
-
 var ownModalDiv = document.createElement('div');
 ownModalDiv.classList.add(id);
-
-
 var viewParagraph = document.createElement('p');
 viewParagraph.textContent = 'View';
 ownModalDiv.appendChild(viewParagraph);
@@ -522,54 +470,23 @@ tableRow.appendChild(dotsCell);
 
 return tableRow;
 }
-
-
-
-function ShowTableRows()
+function showTableRows()
 {
-  var table = document.getElementById('myTable');
+  var table = document.getElementById('UserTable');
   var data=localStorage.getItem("EmployeeData");
   var dataarray=JSON.parse(data);
   console.log(dataarray);
-  /*
-  for(let i in tabledata)
-  {
-    let doc=CreateUserRow(tabledata[i]);
-    table.querySelector('tbody').appendChild(doc);
-  }*/
-  
   for(let i in dataarray)
   {
-    let doc=CreateUserRow(dataarray[i]);
+    let doc=createUserRow(dataarray[i]);
     table.querySelector('tbody').appendChild(doc);
   }
 }
-
-function FilterTableRows()
+function filterTableRows()
 {
-  var table = document.getElementById('myTable');
-  //var st=document.getElementById('status');
-  //var lc=document.getElementById('location');
-  //var dp=document.getElementById('departments');
-  console.log(statusarray);
-  console.log(locationarray);
-  console.log(departmentarray);
-  var table = document.getElementById('myTable');
+  var table = document.getElementById('UserTable');
   var data=localStorage.getItem("EmployeeData");
   var dataarray=JSON.parse(data);
-  var uniqueset=new Set();
-
-  console.log(table.querySelector('tbody'));
-  /*for(let i in dataarray){
-    var doc=dataarray[i];
-    if(lc.value == doc.LOCATION && dp.value == doc.DEPARTMENT && st.value == doc.STATUS)
-    {
-     uniqueset.add(doc);
-    }
-    else {
-      console.log("Conditions not met. Skipping row.");
-    }
-  }*/
   function filterData(selectedStatus, selectedLocation, selectedDepartment) {
     return dataarray.filter(obj => {
         return (selectedStatus.includes(obj.STATUS) || selectedStatus.length === 0) &&
@@ -578,57 +495,49 @@ function FilterTableRows()
     });
 }
   const filteredData = filterData(statusarray, locationarray, departmentarray);
-  
-  //var uniqueRowsArray = Array.from(uniqueset);
-
   setTimeout(function () {
     table.querySelector('tbody').innerHTML = "";
     console.log(table.querySelector('tbody'));
 
     filteredData.forEach(function (row) {
-      let res = CreateUserRow(row);
+      let res = createUserRow(row);
       table.querySelector('tbody').appendChild(res);
     });
   }, 10); 
 }
-
-function ShowActiveUsers(Inp)
+function showActiveUsers(Inp)
 {
-  var table = document.getElementById('myTable');
+  var table = document.getElementById('UserTable');
   table.querySelector('tbody').innerHTML="";
-  var table = document.getElementById('myTable');
   var data=localStorage.getItem("EmployeeData");
   var dataarray=JSON.parse(data);
   for(let i in dataarray){
     var doc=dataarray[i];
     if(Inp == doc.STATUS)
     {
-      let res=CreateUserRow(doc);
+      let res=createUserRow(doc);
       
       table.querySelector('tbody').appendChild(res);
     }
   }
 }
-
-function ShowInActiveUsers()
+function showInActiveUsers()
 {
-  var table = document.getElementById('myTable');
+  var table = document.getElementById('UserTable');
   table.querySelector('tbody').innerHTML="";
-  var table = document.getElementById('myTable');
   var data=localStorage.getItem("EmployeeData");
   var dataarray=JSON.parse(data);
   for(let i in dataarray){
     var doc=dataarray[i];
     if("Inactive" == doc.STATUS)
     {
-      let res=CreateUserRow(doc);
+      let res=createUserRow(doc);
       
       table.querySelector('tbody').appendChild(res);
     }
   }
 }
-
-function ShowFieldDropdown()
+function showFieldDropdown()
 {
   var list = document.querySelector(".checkbox-dropdownlist");
   var checkboxes = document.getElementsByName("dp-empdetails");
@@ -652,8 +561,7 @@ function ShowFieldDropdown()
   }
 
 }
-
-function ShowAddEmployeePage()
+function showAddEmployeePage()
 {
   var mainpage=document.querySelector(".table-part");
   var emppage=document.querySelector(".addemployee-page");
@@ -670,15 +578,12 @@ function ShowAddEmployeePage()
     emppage.style.display="block";
   }
 }
-
-// showing for role
-function ShowAddRolePage()
+function showAddRolePage()
 {
   var usertable=document.querySelector(".info-cards-list");
   var rolepage=document.querySelector(".addnewrole-page");
   var filterrole=document.querySelector(".filterrole");
   var addrole=document.querySelector(".add-roledetails");
-
   if(usertable.style.display == "block"){
     usertable.style.display = "none";
     filterrole.style.display="none";
@@ -705,17 +610,14 @@ fileInput.addEventListener('change',()=>{
 });
 profilepic.src=fileurl;
 
-// Adding data to localStorage
-function AddEmployeeData()
+function addEmployeeData()
 {
-  // Personal Information
   var empNumber = document.getElementById("emp-number").value;
   var firstName = document.getElementById("first-name").value;
   var lastName = document.getElementById("last-name").value;
   var dob = document.getElementById("dob").value;
   var emailId = document.getElementById("email-id").value;
   var mobileNo = document.getElementById("mobile-no").value;
-  // Employment Information
   var joiningDate = document.getElementById("joining-date").value;
   var location = document.getElementById("add-select-loc").value;
   var jobTitle = document.getElementById("add-select-jobtitle").value;
@@ -739,55 +641,31 @@ function AddEmployeeData()
     Manager:assignManager,
     Project:assignProject,
   };
-  var NewEmpModel=[{
-    ProfilePic:fileurl,
-    USER: firstName + lastName,
-    LOCATION: location,
-    DEPARTMENT: department,
-    ROLE: "",
-    EMPNO: empNumber,
-    STATUS: "Inactive",
-    JOINDT: joiningDate,
-    EMAIL: emailId,
-    DOB:dob,
-    MobileNumber:mobileNo,
-    JobTitle:jobTitle,
-    Manager:assignManager,
-    Project:assignProject,
-  }];
-  console.log(EmpModel);
+  var NewEmpModel=[EmpModel];
   var existingData = localStorage.getItem("EmployeeData");
   if(existingData !== null)
   {
     var dataarray=JSON.parse(existingData);
     dataarray.push(EmpModel);
-    console.log(dataarray);
-
     var jsonString = JSON.stringify(dataarray);
     localStorage.setItem("EmployeeData",jsonString);
     alert("Added Successfully");
-    console.log(localStorage);
   }
   else{
     var jsonString=JSON.stringify(NewEmpModel);
     localStorage.setItem("EmployeeData",jsonString);
     alert("Added Successfully");
-    console.log(localStorage);
   }
   profilepic.src="";
   fileurl="";
 }
-
-// Adding role data to LocalStorage
-function AddRoleData()
+function addRoleData()
 {
-
   var roleName = document.getElementById("role-rolename").value;
   var department = document.getElementById("role-selectdepartment").value;
   var description = document.getElementById("role-description").value;
   var location = document.getElementById("role-selectlocation").value;
   var empname=document.getElementById("searchPlaceholder").innerText;
- 
   var RoleModel= 
   {
     EmpName:empname,
@@ -797,37 +675,24 @@ function AddRoleData()
     TotalEmployees: "+43",
     Description:description,
   };
-
-  var NewRoleModel=[{
-    EmpName:empname,
-    Role: roleName,
-    Department: department,
-    Location: location,
-    TotalEmployees: "+43",
-    Description:description,
-  }];
+  var NewRoleModel=[RoleModel];
   var existingData = localStorage.getItem("RoleData");
   if(existingData!== null)
   {
     var dataarray=JSON.parse(existingData);
     dataarray.push(RoleModel);
-    console.log(dataarray);
-
     var jsonString = JSON.stringify(dataarray);
     localStorage.setItem("RoleData",jsonString);
     alert("Added Successfully");
-    console.log(localStorage);
   }
   else{
     var jsonString=JSON.stringify(NewRoleModel);
     localStorage.setItem("RoleData",jsonString);
     alert("Added Successfully");
-    console.log(localStorage);
   }
 
   var existingempData = localStorage.getItem("EmployeeData");
   var empdataarray=JSON.parse(existingempData);
-
   for(let i in empdataarray)
   {
     let doc=empdataarray[i];
@@ -838,14 +703,11 @@ function AddRoleData()
       localStorage.setItem("EmployeeData",jsonstring);
     }
   }
-
 }
-
-//to delete rows
 function sampledelete(){
   const employeeDataString = localStorage.getItem('RoleData');
   let employeeData = JSON.parse(employeeDataString);
-  const indexesToDelete = [0, 1, 2]; // Example indexes to delete
+  const indexesToDelete = [0, 1, 2]; 
   indexesToDelete.sort((a, b) => b - a);
   indexesToDelete.forEach(index => {
       if (index >= 0 && index < employeeData.length) {
@@ -859,43 +721,32 @@ function sampledelete(){
   localStorage.setItem('RoleData', updatedEmployeeDataString);
   console.log('Objects deleted successfully.');
 }
-
-//to add data to excel
-function AddToExcel()
+function addToExcel()
 {
-    const table = document.getElementById('myTable');
+    const table = document.getElementById('UserTable');
     const data = [];
     for (let i = 0; i < table.rows.length; i++) {
         const row = [];
         const tableRow = table.rows[i];
-        // Iterate through the cells of each row
         for (let j = 0; j < tableRow.cells.length; j++) {
             const cell = tableRow.cells[j];
-            // Extract the text content of each cell
             row.push(cell.textContent.trim());
         }
         data.push(row.join(','));
     }
-    // Convert the data array to a CSV string
     const csvContent = data.join('\n');
-    // Create a Blob containing the CSV data
     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8' });
-    // Create a download link
     const link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
     link.download = 'table_data.csv';
-    // Trigger the download
     link.click(); 
 }
-
-//filter by alphabet
-function FilterByAlphabet(inp)
+function filterByAlphabet(inp)
 {
-  var table = document.getElementById('myTable');
+  var table = document.getElementById('UserTable');
   var existingdata=localStorage.getItem("EmployeeData");
   var array=JSON.parse(existingdata);
   var ficon=document.querySelector(".filter-image");
-
   table.querySelector('tbody').innerHTML="";
   var filtered=[];
   filtered=[];
@@ -909,21 +760,17 @@ function FilterByAlphabet(inp)
       continue;
     }
   }
-  console.log(filtered);
   if(filtered.length > 0){
-    ficon.src="./images/filter.png";
+    ficon.src="assets/images/filter.png";
   for(let j in filtered){
-    let res=CreateUserRow(filtered[j]);
+    let res=createUserRow(filtered[j]);
     table.querySelector('tbody').appendChild(res);
   }}
   else{
-    ficon.src="./images/filterblack.png";
+    ficon.src="assets/images/filterblack.png";
   }
-
 }
-
-//sort according to col
-function SortAccordToCol(inp)
+function sortAccordToCol(inp)
 {
   var existingdata=localStorage.getItem("EmployeeData");
   var array=JSON.parse(existingdata);
@@ -934,39 +781,34 @@ function SortAccordToCol(inp)
     return 0;
   });
   console.log(array);
-  var table = document.getElementById('myTable');
+  var table = document.getElementById('UserTable');
   table.querySelector('tbody').innerHTML="";
 
   for(let i in array)
   {
-    let doc=CreateUserRow(array[i]);
+    let doc=createUserRow(array[i]);
     table.querySelector('tbody').appendChild(doc);
   }
 }
-
-function SortDecToCol(inp)
+function sortDecToCol(inp)
 {
   var existingdata=localStorage.getItem("EmployeeData");
   var array=JSON.parse(existingdata);
-
   array.sort((a, b) => {
     if (a[inp] < b[inp]) return 1; 
     if (a[inp] > b[inp]) return -1; 
     return 0; 
   });
   console.log(array);
-  var table = document.getElementById('myTable');
+  var table = document.getElementById('UserTable');
   table.querySelector('tbody').innerHTML="";
 
   for(let i in array)
   {
-    let doc=CreateUserRow(array[i]);
+    let doc=createUserRow(array[i]);
     table.querySelector('tbody').appendChild(doc);
   }
 }
-
-
-
 function show3dots(inp){
   var dots3 = document.querySelector("."+inp);
     if (dots3.style.display === "none") {
@@ -976,241 +818,235 @@ function show3dots(inp){
       dots3.style.display = "none";
     }
 }
-
-
-function CreateRoleCard(userInformation){
+function createRoleCard(userInformation){
   var infoCardContainer = document.createElement("div");
   infoCardContainer.classList.add("info-card-2");
-
-  // Create user profile box
   var userProfileBox = document.createElement("div");
   userProfileBox.classList.add("user-profile-box-2");
-
   var userProfileImage = document.createElement("img");
-  userProfileImage.src = "./images/man.jpg";
+  userProfileImage.src = "assets/images/man.jpg";
   userProfileImage.alt = "Human Avatar";
-
   var userProfileText = document.createElement("span");
   userProfileText.classList.add("span-outside");
   userProfileText.innerHTML = userInformation.username + "<br><span class='span-inside'>" + userInformation.userrole + "</span>";
-
   userProfileBox.appendChild(userProfileImage);
   userProfileBox.appendChild(userProfileText);
-
   infoCardContainer.appendChild(userProfileBox);
   infoCardContainer.appendChild(document.createElement("br"));
-
   // Create infocard items
   var infoCardItems = document.createElement("div");
   infoCardItems.classList.add("infocard-items");
-
   var stampIcon = document.createElement("img");
-  stampIcon.src = "./svg/stamp.svg";
+  stampIcon.src = "assets/svg/stamp.svg";
   stampIcon.alt = "Stamp symbol";
-
   var stampText = document.createElement("span");
   stampText.innerHTML = userInformation.stamp;
-
   infoCardItems.appendChild(stampIcon);
   infoCardItems.appendChild(stampText);
-
   infoCardContainer.appendChild(infoCardItems);
-
-  // Create email item
   var emailItem = document.createElement("div");
   emailItem.classList.add("infocard-items");
-
   var emailIcon = document.createElement("img");
-  emailIcon.src = "./svg/email.svg";
+  emailIcon.src = "assets/svg/email.svg";
   emailIcon.alt = "Email symbol";
-
   var emailText = document.createElement("span");
   emailText.innerHTML = userInformation.useremail;
-
   emailItem.appendChild(emailIcon);
   emailItem.appendChild(emailText);
-
   infoCardContainer.appendChild(emailItem);
-
-  // Create department item
   var departmentItem = document.createElement("div");
   departmentItem.classList.add("infocard-items");
-
   var departmentIcon = document.createElement("img");
-  departmentIcon.src = "./svg/group.svg";
+  departmentIcon.src = "assets/svg/group.svg";
   departmentIcon.alt = "Group symbol";
-
   var departmentText = document.createElement("span");
   departmentText.innerHTML = userInformation.userdepartment;
-
   departmentItem.appendChild(departmentIcon);
   departmentItem.appendChild(departmentText);
-
   infoCardContainer.appendChild(departmentItem);
-
-  // Create location item
   var locationItem = document.createElement("div");
   locationItem.classList.add("infocard-items");
-
   var locationIcon = document.createElement("img");
-  locationIcon.src = "./svg/location.svg";
+  locationIcon.src = "assets/svg/location.svg";
   locationIcon.alt = "Location symbol";
-
   var locationText = document.createElement("span");
   locationText.innerHTML = userInformation.location;
-
   locationItem.appendChild(locationIcon);
   locationItem.appendChild(locationText);
-
   infoCardContainer.appendChild(locationItem);
-
-  // Create arrow item
   var arrowItem = document.createElement("div");
   arrowItem.classList.add("arrow-item");
-
   var arrowImage = document.createElement("img");
-  arrowImage.src = "./svg/arrow.svg";
+  arrowImage.src = "assets/svg/arrow.svg";
   arrowImage.alt = "Arrow symbol";
-
   var viewSpan = document.createElement("span");
   viewSpan.innerHTML = "View";
-
   arrowItem.appendChild(viewSpan);
   arrowItem.appendChild(arrowImage);
-
   infoCardContainer.appendChild(arrowItem);
   return infoCardContainer;
 }
-
-
-function ShowRoleCard(){
+function showRoleCard(){
   var space=document.querySelector(".info-cards-list-2");
   space.innerHTML="";
   for(let i in users){
-    let res=CreateRoleCard(users[i]);
+    let res=createRoleCard(users[i]);
     space.appendChild(res);
   }
 }
-
-function ShowDepartmentWise(Inp)
+function showDepartmentWise(Inp)
 {
-  var table = document.getElementById('myTable');
+  var table = document.getElementById('UserTable');
   table.querySelector('tbody').innerHTML="";
-  var table = document.getElementById('myTable');
   var data=localStorage.getItem("EmployeeData");
   var dataarray=JSON.parse(data);
   for(let i in dataarray){
     var doc=dataarray[i];
     if(Inp == doc.DEPARTMENT)
     {
-      let res=CreateUserRow(doc);
+      let res=createUserRow(doc);
       
       table.querySelector('tbody').appendChild(res);
     }
   }
 }
 
-
 var containers = document.querySelectorAll(".alphabet");
-  var previousContainer = null;
+var previousContainer = null;
+containers.forEach(function(container) {
+container.addEventListener("click", function(event) {
+  if (previousContainer !== null) {
+    previousContainer.style.backgroundColor = ""; 
+  }
+  container.style.backgroundColor = "rgba(244,72,72,255)";
+  container.style.color="white";
+  previousContainer = container;
+});
+});
 
-  containers.forEach(function(container) {
-    container.addEventListener("click", function(event) {
-      if (previousContainer !== null) {
-        previousContainer.style.backgroundColor = ""; 
-      }
-      container.style.backgroundColor = "rgba(244,72,72,255)";
-      container.style.color="white";
-      previousContainer = container;
+function showFilterStatusDropdown()
+{
+  var list = document.querySelector(".filtercheckbox-dropdownlist");
+  var placeholder = document.getElementById("filter-display1");
+  var chk=document.querySelectorAll('input[type="checkbox"][name="filter-status"]');
+  if (list.style.display === "none") {
+      list.style.display = "flex";
+  } else {
+      list.style.display = "none";
+  }
+  let arr=[];
+  chk.forEach(function(event){
+    event.addEventListener("click",function(){
+        let v=event.value;
+        if(event.checked){
+          arr.push(v);
+        }
+        else{
+          const index = arr.indexOf(v);
+          if (index !== -1) {
+              arr.splice(index, 1);
+          }
+        }
+        statusarray=arr;
+        placeholder.innerText=arr.length +" "+ "Selected";
     });
   });
-
- 
-  function ShowFilterStatusDropdown()
-  {
-    var list = document.querySelector(".filtercheckbox-dropdownlist");
-    var placeholder = document.getElementById("filter-display1");
-    var chk=document.querySelectorAll('input[type="checkbox"][name="filter-status"]');
-    if (list.style.display === "none") {
-        list.style.display = "flex";
-    } else {
-        list.style.display = "none";
-    }
-
-    let arr=[];
-    chk.forEach(function(event){
-      event.addEventListener("click",function(){
-          let v=event.value;
-          if(event.checked){
-            arr.push(v);
-          }
-          else{
-            const index = arr.indexOf(v);
-            if (index !== -1) {
-                arr.splice(index, 1);
-            }
-          }
-          statusarray=arr;
-          placeholder.innerText=arr.length +" "+ "Selected";
-      });
-    });
+}
+function showFilterDepartmentDropdown(){
+  var list = document.querySelector(".filtercheckbox-dropdownlist2");
+  var placeholder = document.getElementById("filter-display2");
+  var chk=document.querySelectorAll('input[type="checkbox"][name="filter-department"]');
+  if (list.style.display === "none") {
+      list.style.display = "flex";
+  } else {
+      list.style.display = "none";
   }
-
-  function ShowFilterDepartmentDropdown(){
-    var list = document.querySelector(".filtercheckbox-dropdownlist2");
-    var placeholder = document.getElementById("filter-display2");
-    var chk=document.querySelectorAll('input[type="checkbox"][name="filter-department"]');
-    if (list.style.display === "none") {
-        list.style.display = "flex";
-    } else {
-        list.style.display = "none";
-    }
-    let arr=[]
-    chk.forEach(function(event){
-      event.addEventListener("click",function(){
-          let v=event.value;
-          if(event.checked){
-            arr.push(v);
+  let arr=[]
+  chk.forEach(function(event){
+    event.addEventListener("click",function(){
+        let v=event.value;
+        if(event.checked){
+          arr.push(v);
+        }
+        else{
+          const index = arr.indexOf(v);
+          if (index !== -1) {
+              arr.splice(index, 1);
           }
-          else{
-            const index = arr.indexOf(v);
-            if (index !== -1) {
-                arr.splice(index, 1);
-            }
-          }
-          departmentarray=arr;
-          console.log(departmentarray);
-          placeholder.innerText=arr.length +" "+ "Selected";
-      });
+        }
+        departmentarray=arr;
+        console.log(departmentarray);
+        placeholder.innerText=arr.length +" "+ "Selected";
     });
+  });
+}
+function showFilterLocationDropdown(){
+  var list = document.querySelector(".filtercheckbox-dropdownlist3");
+  var placeholder = document.getElementById("filter-display3");
+  var chk=document.querySelectorAll('input[type="checkbox"][name="filter-location"]');
+  if (list.style.display === "none") {
+      list.style.display = "flex";
+  } else {
+      list.style.display = "none";
   }
-
-  function ShowFilterLocationDropdown(){
-    var list = document.querySelector(".filtercheckbox-dropdownlist3");
-    var placeholder = document.getElementById("filter-display3");
-    var chk=document.querySelectorAll('input[type="checkbox"][name="filter-location"]');
-    if (list.style.display === "none") {
-        list.style.display = "flex";
-    } else {
-        list.style.display = "none";
-    }
-    let arr=[]
-    chk.forEach(function(event){
-      event.addEventListener("click",function(){
-          let v=event.value;
-          if(event.checked){
-            arr.push(v);
+  let arr=[]
+  chk.forEach(function(event){
+    event.addEventListener("click",function(){
+        let v=event.value;
+        if(event.checked){
+          arr.push(v);
+        }
+        else{
+          const index = arr.indexOf(v);
+          if (index !== -1) {
+              arr.splice(index, 1);
           }
-          else{
-            const index = arr.indexOf(v);
-            if (index !== -1) {
-                arr.splice(index, 1);
-            }
-          }
-          locationarray=arr;
-          console.log(locationarray);
-          placeholder.innerText=arr.length +" "+ "Selected";
-      });
+        }
+        locationarray=arr;
+        console.log(locationarray);
+        placeholder.innerText=arr.length +" "+ "Selected";
     });
-
+  });
+}
+function showEmp(){
+  var employeepage = document.querySelector(".employee-page");
+  var roledetailspage = document.querySelector(".roledetails-page");
+  var rolepage = document.querySelector(".role-page");
+  if(employeepage.style.display == "none"){
+      employeepage.style.display = "block";
+      roledetailspage.style.display = "none";
+      rolepage.style.display = "none";
   }
+  else{
+      employeepage.style.display = "none";
+  }
+}
+function showRole(){
+  var employeepage=document.querySelector(".employee-page");
+  var roledetailspage=document.querySelector(".roledetails-page");
+  var rolepage=document.querySelector(".role-page");
+  if(roledetailspage.style.display == "none"){
+      roledetailspage.style.display = "block";
+      employeepage.style.display = "none";
+      rolepage.style.display = "none";
+  }
+  else{
+      roledetailspage.style.display = "none";
+  }
+  showAllCards();
+}
+
+function showAllEmp(){
+  var employeepage = document.querySelector(".employee-page");
+  var roledetailspage = document.querySelector(".roledetails-page");
+  var rolepage = document.querySelector(".role-page");
+  showRoleCard();
+  if(rolepage.style.display == "none"){
+      rolepage.style.display = "block";
+      employeepage.style.display = "none";
+      roledetailspage.style.display = "none";
+  }
+  else{
+      rolepage.style.display = "none";
+  }
+}
