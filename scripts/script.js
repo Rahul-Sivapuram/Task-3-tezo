@@ -415,7 +415,7 @@ function CreateUserRow(data)
 var tableRow = document.createElement('tr');
 var radioCell = document.createElement('td');
 var radioInput = document.createElement('input');
-radioInput.setAttribute('type', 'radio');
+radioInput.setAttribute('type', 'checkbox');
 radioInput.setAttribute('name', 'checkbox4');
 radioInput.setAttribute('id', 'checkbox4');
 var labelForRadio = document.createElement('label');
@@ -722,7 +722,7 @@ function AddEmployeeData()
   var department = document.getElementById("add-select-department").value;
   var assignManager = document.getElementById("managers").value;
   var assignProject = document.getElementById("projects").value;
-
+  
   var EmpModel={
     ProfilePic:fileurl,
     USER: firstName + lastName,
