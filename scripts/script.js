@@ -478,17 +478,21 @@ tableRow.appendChild(statusCell);
 var joinDateCell = document.createElement('td');
 joinDateCell.textContent = data.JOINDT;
 tableRow.appendChild(joinDateCell);
-
+const id="own-model"+data.USER[0]+data.USER[1];
 var dotsCell = document.createElement('td');
 var dotsImage = document.createElement('img');
 dotsImage.setAttribute('src', './svg/threedots.svg');
 dotsImage.setAttribute('alt', 'Threedots symbol');
+dotsImage.classList.add("own-model-button"+data.USER[0])
 dotsImage.onclick=function() {
-  show3dots();
+  console.log(id);
+  show3dots(id);
 };
 
 var ownModalDiv = document.createElement('div');
-ownModalDiv.classList.add('own-model');
+ownModalDiv.classList.add(id);
+
+
 var viewParagraph = document.createElement('p');
 viewParagraph.textContent = 'View';
 ownModalDiv.appendChild(viewParagraph);
@@ -501,8 +505,20 @@ ownModalDiv.appendChild(deleteParagraph);
 
 dotsCell.appendChild(dotsImage);
 dotsCell.appendChild(ownModalDiv);
+ownModalDiv.style.border=".3px solid black";
+ownModalDiv.style.display="none";
+ownModalDiv.style.backgroundColor="white";
+ownModalDiv.style.flexDirection="column";
+ownModalDiv.style.alignItems="center";
+ownModalDiv.style.position="relative";
+ownModalDiv.style.marginTop="-1.8rem";
+ownModalDiv.style.marginLeft="2.3rem";
+ownModalDiv.style.height="5rem";
+ownModalDiv.style.width="3rem";
+ownModalDiv.style.zIndex="999";
+ownModalDiv.style.fontSize=".5rem";
+ownModalDiv.style.color="black";
 tableRow.appendChild(dotsCell);
-
 
 return tableRow;
 }
@@ -951,15 +967,14 @@ function SortDecToCol(inp)
 
 
 
-function show3dots(){
-  var dots3=document.querySelector(".own-model");
-  console.log("Hi");
-  if(dots3.style.display == "none"){
-    dots3.style.display = "flex";
-  }
-  else{
-    dots3.style.display = "none";
-  }
+function show3dots(inp){
+  var dots3 = document.querySelector("."+inp);
+    if (dots3.style.display === "none") {
+        dots3.style.display = "flex";
+    }
+    else{
+      dots3.style.display = "none";
+    }
 }
 
 
@@ -1121,6 +1136,7 @@ var containers = document.querySelectorAll(".alphabet");
     } else {
         list.style.display = "none";
     }
+
     let arr=[];
     chk.forEach(function(event){
       event.addEventListener("click",function(){
@@ -1135,7 +1151,6 @@ var containers = document.querySelectorAll(".alphabet");
             }
           }
           statusarray=arr;
-          console.log(statusarray);
           placeholder.innerText=arr.length +" "+ "Selected";
       });
     });

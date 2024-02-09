@@ -784,7 +784,7 @@ label{
 .upload-pic input{
     display: none;
 }
-
+/*
 .own-model{
     border: .3px solid black;
     display: none;
@@ -800,7 +800,7 @@ label{
     font-size: .5rem;
     color: black;
 }
-
+*/
 .show3dots{
     border: none;
     background-color: none;
