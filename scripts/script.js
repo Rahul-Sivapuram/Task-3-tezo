@@ -218,23 +218,35 @@ function showSidebar(){
     const navbar = document.querySelector(".navbar");
     const headersearchbar = document.querySelector(".header-searchbar");
     const smallsidebar=document.querySelector(".small-sidebar");
+    const employeepage = document.querySelector(".employee-page");
+    const roledetailspage=document.querySelector(".roledetails-page");
+    const rolepage=document.querySelector(".role-page");
     smallsidebar.style.display="none";
     sidebar.style.display = "flex";
     menu.style.display = "none";
     navbar.style.marginLeft="12rem";
     headersearchbar.style.marginLeft="1rem";
+    employeepage.style.marginLeft="12.9rem";
+    roledetailspage.style.marginLeft="12.9rem";
+    rolepage.style.marginLeft="12.9rem";
 }
 function hideSidebar(){
     const sidebar = document.querySelector(".sidebar");
     const menu = document.querySelector(".menu");
     const navbar = document.querySelector(".navbar");
     const headersearchbar = document.querySelector(".header-searchbar");
+    const employeepage = document.querySelector(".employee-page");
+    const roledetailspage=document.querySelector(".roledetails-page");
+    const rolepage=document.querySelector(".role-page");
     const smallsidebar = document.querySelector(".small-sidebar");
     sidebar.style.display = "none";
     menu.style.display = "block";
     smallsidebar.style.display = "flex";
     headersearchbar.style.marginLeft = "1rem";
     navbar.style.marginLeft = "1rem"
+    employeepage.style.marginLeft="7rem";
+    roledetailspage.style.marginLeft="7rem";
+    rolepage.style.marginLeft="7rem";
 }
 function createCard(data){
     let infocard = document.createElement("div");

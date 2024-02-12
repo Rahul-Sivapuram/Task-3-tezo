@@ -5,6 +5,7 @@ body{
 }
 .employee-page, .roledetails-page ,.role-page{
     display: none;
+    margin-left: 12.9rem;
 }
 /* NavBar and Sidebar */
 .navbar{
@@ -158,28 +159,6 @@ body{
 .employee-seperate{
     color:rgba(245,92,92,255);
 }
-/*
-.dashboard{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 180px;
-    height: 2rem;
-    color: rgba(166,169,172,255);
-    font-size: .7rem;
-}
-.dashboard-seperate{
-    display: flex;
-    align-items: center;
-    padding: .5rem .5rem .5rem .2rem;
-    justify-content: space-between;
-    background-color:rgba(253,233,233,255) ;
-    width: 180px;
-    
-    border-radius: .5rem;
-    color: rgba(166,169,172,255);
-    font-size: .7rem;
-}*/
 .dashboard{
     display: flex;
     align-items: center;
@@ -371,7 +350,6 @@ body{
 
 /* Add Employee Section*/
 .add-employee{
-    margin-left: 12.9rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -420,7 +398,6 @@ body{
 
 /* Filter By Alphabets */
 .filter{
-    margin-left: 12.9rem;
     margin-top: 1rem;
     display: flex;
     gap: .3rem;
@@ -457,7 +434,6 @@ body{
     display: none;
     justify-content: space-between;
     align-items: center;
-    margin-left: 12.9rem;
     margin-top: 2rem;
     padding-left: .6rem;
     padding-right: .6rem;
@@ -579,7 +555,6 @@ select{
 .user-section{
     height: 40rem; 
     margin-top: 1rem;   
-    margin-left: 13rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: .5rem;
     padding: 1.2rem 0 1.2rem 0;
@@ -680,7 +655,6 @@ input[type="radio"] + label{
 .addemployee-page{
     display: none;
     margin-top: 1.5rem;
-    margin-left: 12.9rem;
 }
 /*
 .profilepic{
@@ -809,7 +783,6 @@ label{
 /* style3.css */
 .add-roledetails{
     margin-top: 1.4rem;
-    margin-left: 12.9rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -841,7 +814,6 @@ label{
     height: 3rem;
     display: flex;
     justify-content: space-between;
-    margin-left: 12.9rem;
     margin-top: 2rem;
     align-items: center;
     padding-left: .6rem;
@@ -904,7 +876,6 @@ label{
     flex-direction: column;
     gap: .5rem;
     margin-top: 1.5rem;
-    margin-left: 12.9rem;
 }
 .addnewrole-page option{
     color: black;
@@ -1028,7 +999,6 @@ label{
 /* Info card list */
 .info-cards-list{
     margin-top: 2rem;
-    margin-left: 12.9rem;
     display: flex;
     flex-wrap: wrap;
     gap: .7rem;
@@ -1125,7 +1095,6 @@ label{
 /* style2.css */
 .add-role{
     margin-top: 1.4rem;
-    margin-left: 12.9rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1158,9 +1127,7 @@ label{
 }
 
 /* Role Description */
-.role-description{
-    margin-left: 12.9rem;
-}
+
 .role-description-p{
     margin-top: 0;
     font-size: .9rem;
@@ -1169,7 +1136,6 @@ label{
 
 /* Info Card List Section */
 .info-cards-list-2{
-    margin-left: 12.9rem;
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
