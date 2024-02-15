@@ -1,26 +1,43 @@
 body{
     padding-right: 2rem;
     font-family: 'Roboto', sans-serif;
-    margin-top: .5rem;    
+    margin-top: 0;
+    display: flex;
 }
 .employee-page, .roledetails-page ,.role-page{
     display: none;
-    margin-left: 12.9rem;
+    margin-left: 1rem;
 }
-/* NavBar and Sidebar */
-.navbar{
+.toastrow{
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    gap: 3rem;
 }
-.navbar li{
-    list-style: none;
-}
-.menu{
+.toast{
+
+    width: 10rem;
+    border-radius: .2rem;
+    border: .1rem solid white;
+    height: 4rem;
     display: none;
-    flex-direction: column;
+    color: white;
+    background-color: green;
+    justify-content: center;
+    align-items: center;
 }
+
+.testleft{
+    height: 100%;
+    width: 16%;
+    box-shadow: rgba(149, 157, 165, 0.2) 8px 0px 24px;
+}
+.testright{
+    padding-top: 1rem;
+    width: 84%;
+    display: flex;
+    flex-direction: column;   
+}
+
+/* NavBar */
 .hamburger{
     cursor: pointer;
     transform: rotate(180deg);
@@ -33,7 +50,7 @@ body{
     width: 1rem;
 }
 .header-searchbar{
-    margin-left: 12.9rem;
+    margin-left: .5rem;
     padding-left: .5rem;
     padding-right: .5rem;
     width: 100%;
@@ -109,10 +126,7 @@ body{
 .search-box:focus{
     outline: none;
 }
-
 .sidebar{
-    margin-top: -4rem;
-    position: absolute;
     padding-left: .2rem;
     padding-top: 1.4rem;
     width: 190px;
@@ -120,18 +134,19 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 27rem;
+    gap: 3rem;
+    padding-bottom: 1rem;
 }
 .small-sidebar{
+    padding-top: 1.4rem;
     cursor: pointer;
     top: 5rem;
-    position: absolute;
-    left: 2;
-    width: 4rem;
+    width: auto;
+    height:50rem;
     display: none;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 .sidebar-toppart{
     display: flex;
@@ -178,6 +193,7 @@ body{
     margin-top: 0;
     height: 2rem;
     border-radius: .5rem;
+    padding-left: .3rem;
     margin-bottom: 0;
     color: rgba(245,94,94,255);
     font-size: .7rem;
@@ -231,7 +247,6 @@ body{
     font-weight: 400;
 }
 .sep-heading{
-    
     margin-top: .4rem;
     font-size: .7rem;
     color: rgba(211,212,213,255);
@@ -246,12 +261,6 @@ body{
     text-align: center;
     background-color: rgba(255,244,244,255);
 }
-
-.department-button-square:hove{
-    background-color: rgba(244,72,72,255);
-    color: white;
-}
-
 .department-button{
     width: 9.5rem;
     height: 2rem;
@@ -265,7 +274,7 @@ body{
     border-radius: .4rem;
 }
 .department-button:hover{
-    .department-button-squar{
+    .department-button-square{
         background-color: rgba(244,72,72,255);
         color: white;
     }
@@ -274,7 +283,6 @@ body{
 .department-button-left{
     margin-left: .5rem;
     display: flex;
-        
     align-items: center;
     font-size: 0.8rem;
     gap: 1rem;
@@ -290,11 +298,9 @@ body{
     background-color: grey;
     border-radius: 50%;
 }
-
 .sidebar li{
     list-style: none;
 }
-
 .update-section{
     height: fit-content;
     width: fit-content;
@@ -431,7 +437,7 @@ body{
 /* filter section */
 .filter-option{
     height: 3rem;
-    display: none;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 2rem;
@@ -459,6 +465,7 @@ body{
     height: 1.7rem;
     width: 4rem;
     display: flex;
+    cursor: pointer;
     justify-content: center;
     align-items: center;
     border:1px solid rgba(255,121,131,255);
@@ -471,6 +478,7 @@ body{
     height: 1.7rem
     ;width: 4rem;
     display: flex;
+    cursor: pointer;
     justify-content: center;
     align-items: center;
     border:1px solid rgba(255,121,131,255);
@@ -486,10 +494,37 @@ select{
     border-radius: .3rem;
     color: rgba(108,120,145,255);
 }
-.filter-dropdown{
+.filter-dropdown-1{
     width: 8rem;
     height: 2rem;
     display: flex;
+    cursor: pointer;
+    padding: 0 .7rem;
+    border-radius: .3rem;
+    color: rgba(108,120,145,255);
+    background-color: white;
+    justify-content: space-between;
+    border:1px solid rgba(255,121,131,255);
+    align-items: center;
+}
+.filter-dropdown-2{
+    width: 8rem;
+    height: 2rem;
+    display: flex;
+    cursor: pointer;
+    padding: 0 .7rem;
+    border-radius: .3rem;
+    color: rgba(108,120,145,255);
+    background-color: white;
+    justify-content: space-between;
+    border:1px solid rgba(255,121,131,255);
+    align-items: center;
+}
+.filter-dropdown-3{
+    width: 8rem;
+    height: 2rem;
+    display: flex;
+    cursor: pointer;
     padding: 0 .7rem;
     border-radius: .3rem;
     color: rgba(108,120,145,255);
@@ -501,8 +536,8 @@ select{
 .filtercheckbox-dropdownlist{
     position: absolute;
     padding: .5rem 0;
-    top: 18.6rem;
-    left: 18rem;
+    top: 18.8rem;
+    left: 18.5rem;
     background-color: white;
     border-radius: .3rem;
     border:1px solid rgba(255,121,131,255);
@@ -514,8 +549,8 @@ select{
 .filtercheckbox-dropdownlist2{
     position: absolute;
     padding: .5rem 0;
-    top: 18.4rem;
-    left: 28rem;
+    top: 18.8rem;
+    left: 28.5rem;
     background-color: white;
     border-radius: .3rem;
     border:1px solid rgba(255,121,131,255);
@@ -527,8 +562,8 @@ select{
 .filtercheckbox-dropdownlist3{
     position: absolute;
     padding: .5rem 0;
-    top: 18.4rem;
-    left: 38rem;
+    top: 18.8rem;
+    left: 38.5rem;
     background-color: white;
     border-radius: .3rem;
     border:1px solid rgba(255,121,131,255);
@@ -552,13 +587,11 @@ select{
     flex-direction: column;
     cursor: pointer;
 }
-.user-section{
-    height: 40rem; 
+.user-section{ 
     margin-top: 1rem;   
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: .5rem;
     padding: 1.2rem 0 1.2rem 0;
-    overflow-y: scroll;
 }
 .delete-add-row{
     margin: 0 1.4rem 0 1rem;
@@ -758,23 +791,6 @@ label{
 .upload-pic input{
     display: none;
 }
-/*
-.own-model{
-    border: .3px solid black;
-    display: none;
-    background-color: white;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    margin-left: 2.3rem;
-    margin-top: -1.8rem;
-    height: 5rem;
-    width: 3rem;
-    z-index: 999;
-    font-size: .5rem;
-    color: black;
-}
-*/
 .show3dots{
     border: none;
     background-color: none;
@@ -796,6 +812,7 @@ label{
     font-weight: 500;
 }
 .add-role-button{
+    cursor: pointer;
     border: none;
     width: 10rem;
     display: flex;
@@ -998,10 +1015,10 @@ label{
 
 /* Info card list */
 .info-cards-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 0.7rem;
     margin-top: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: .7rem;
 }
 .info-card{
     width: 17.7rem;
