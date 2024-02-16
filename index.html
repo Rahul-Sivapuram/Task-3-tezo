@@ -294,9 +294,10 @@
                         <button class="add-dismiss-button" onclick=app.showAddEmployeePage()>
                             <span>Dismiss</span>
                         </button>
-                        <button class="add-accept-button" onclick=app.addEmployeeData()>
+                        <button class="add-accept-button" type="submit" onclick=app.addEmployeeData(event)>
                             <span>Accept</span>
                         </button>
+                        
                     </div>
                     <br>
                 </form>
@@ -416,7 +417,7 @@
                     <div class="delete-add-row">
                         <div class="arrow-down">
                             <img src="assets/images/downarrow.png" alt="Downarrow image" srcset="">
-                            <button class="delete-button">
+                            <button class="delete-button" onclick="app.deleteRow()">
                                 <span>Delete</span>
                             </button>
                         </div>
