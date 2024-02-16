@@ -255,7 +255,17 @@ const app = (function() {
     return tableRow;
   }
 
-  function addEmployeeData(){
+  function test(){
+    setTimeout(()=>{
+      console.log("hi");
+    let toast=document.querySelector(".toast-employee");
+    toast.style.display = "none";
+    showAddEmployeePage();
+    },3000);
+  }
+
+  function addEmployeeData(event){
+    event.preventDefault();
     var empNumber = document.getElementById("emp-number").value;
     var firstName = document.getElementById("first-name").value;
     var lastName = document.getElementById("last-name").value;
@@ -297,20 +307,17 @@ const app = (function() {
       var jsonString=JSON.stringify(NewEmpModel);
       localStorage.setItem("EmployeeData",jsonString);
     }
-    profilepic.src="";
-    fileUrl="";
     let toast=document.querySelector(".toast-employee");
     toast.style.display = "flex";
-    setTimeout(function() {
-      toast.style.display = "none";
-      
-    }, 300000);
+    test();
+    profilepic.src="";
+    fileUrl="";
   }
 
   function deleteRow(){
     const employeeDataString = localStorage.getItem('EmployeeData');
     let employeeData = JSON.parse(employeeDataString);
-    const indextodelete = [20,21,24]; 
+    const indextodelete = [15,16,17,18,19]; 
     indextodelete.sort((a, b) => b - a);
     indextodelete.forEach(index => {
         if (index >= 0 && index < employeeData.length) {
@@ -1119,6 +1126,7 @@ const app = (function() {
     createMultiSelectDropDown:createMultiSelectDropDown,
     showEmptyDisplay:showEmptyDisplay,
     getDepartmentCount:getDepartmentCount,
+    test:test,
   }
 })();
 

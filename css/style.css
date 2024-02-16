@@ -655,6 +655,7 @@ select{
 .delete-button{   
     height: 2rem;
     width: 5rem;
+    cursor: pointer;
     background-color: rgba(248,145,145,255);
     color:rgba(253,223,223,255);
     border-radius: .3rem;
@@ -665,6 +666,7 @@ select{
 }
 .checked-delete-button{   
     height: 2rem;
+    cursor: pointer;
     width: 5rem;
     background-color:rgba(244,72,72,255);
     color:white;
@@ -769,6 +771,7 @@ input[type="radio"] + label{
 
 /* Add Employee Page Section */
 .addemployee-page{
+    position: relative;
     display: none;
     margin-top: 1.5rem;
 }
