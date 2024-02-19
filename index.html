@@ -97,34 +97,33 @@
                         
                     </ul>
             
-                <!-- ROLE/USER MANAGEMENT -->
-                <h3 class="heading">ROLE / USER MANAGEMENT</h3>
-                <div class="special-button">
-                    <div class="dashboard-seperate" onclick=app.showRole()>
-                        <div class="dash-left">
-                            <img src="assets/svg/settingsblack.svg" alt="Setting symbol" srcset="">
-                            <span>Roles</span>
+                    <!-- ROLE/USER MANAGEMENT -->
+                    <h3 class="heading">ROLE / USER MANAGEMENT</h3>
+                    <div class="special-button">
+                        <div class="dashboard-seperate" onclick=app.showRole()>
+                            <div class="dash-left">
+                                <img src="assets/svg/settingsblack.svg" alt="Setting symbol" srcset="">
+                                <span>Roles</span>
+                            </div>
+                            <div class="dash-right">
+                                <img src="assets/svg/arrowforward.svg" alt="Arrow symbol" class="arrow">
+                            </div>
                         </div>
-                        <div class="dash-right">
-                            <img src="assets/svg/arrowforward.svg" alt="Arrow symbol" class="arrow">
-                        </div>
+                        <div class="corner-line"></div>
                     </div>
-                    <div class="corner-line"></div>
-                </div>
-            
-                <div class="special-button">
-                    <div class="dashboard-seperate">
-                        <div class="dash-left">
-                        <img src="assets/svg/account.svg" alt="Account symbol" srcset="">
-                            <span>Access Rights</span>
+                
+                    <div class="special-button">
+                        <div class="dashboard-seperate">
+                            <div class="dash-left">
+                            <img src="assets/svg/account.svg" alt="Account symbol" srcset="">
+                                <span>Access Rights</span>
+                            </div>
+                            <div class="dash-right">
+                                <img src="assets/svg/arrowforward.svg" alt="Arrow symbol" class="arrow">
+                            </div>
                         </div>
-                        <div class="dash-right">
-                            <img src="assets/svg/arrowforward.svg" alt="Arrow symbol" class="arrow">
-                        </div>
+                        <div class="corner-line"></div>
                     </div>
-                    <div class="corner-line"></div>
-                </div>
-        
                 </div>
             </div>
             <!-- update section -->
@@ -663,7 +662,7 @@
                         <button class="role-dismiss-button" onclick=app.showAddRolePage()>
                             <span>Dismiss</span>
                         </button>
-                        <button class="role-accept-button" onclick=app.addRoleData()>
+                        <button class="role-accept-button" onclick=app.addRoleData(event)>
                             <span>Accept</span>
                         </button>
                     </div>

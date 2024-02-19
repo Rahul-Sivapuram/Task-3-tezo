@@ -255,9 +255,8 @@ const app = (function() {
     return tableRow;
   }
 
-  function test(){
+  function navigator(){
     setTimeout(()=>{
-      console.log("hi");
     let toast=document.querySelector(".toast-employee");
     toast.style.display = "none";
     showAddEmployeePage();
@@ -296,22 +295,28 @@ const app = (function() {
     );
     var NewEmpModel = [EmpModel];
     var existingData = localStorage.getItem("EmployeeData");
-    if(existingData !== null)
+    if(mobileNo.length <10 || mobileNo.length>10){
+      alert("Mobile Number should be 10 digits");
+    }
+    else
     {
-      var dataarray=JSON.parse(existingData);
-      dataarray.push(EmpModel);
-      var jsonString = JSON.stringify(dataarray);
-      localStorage.setItem("EmployeeData",jsonString);
+      if(existingData !== null)
+      {
+        var dataarray=JSON.parse(existingData);
+        dataarray.push(EmpModel);
+        var jsonString = JSON.stringify(dataarray);
+        localStorage.setItem("EmployeeData",jsonString);
+      }
+      else{
+        var jsonString=JSON.stringify(NewEmpModel);
+        localStorage.setItem("EmployeeData",jsonString);
+      }
+      let toast=document.querySelector(".toast-employee");
+      toast.style.display = "flex";
+      navigator();
+      profilepic.src="";
+      fileUrl="";
     }
-    else{
-      var jsonString=JSON.stringify(NewEmpModel);
-      localStorage.setItem("EmployeeData",jsonString);
-    }
-    let toast=document.querySelector(".toast-employee");
-    toast.style.display = "flex";
-    test();
-    profilepic.src="";
-    fileUrl="";
   }
 
   function deleteRow(){
@@ -581,7 +586,16 @@ const app = (function() {
     }
   }
 
-  function addRoleData(){
+  function customToast(){
+    setTimeout(()=>{
+      let toast=document.querySelector(".toast-role");
+      toast.style.display = "none";
+      showAddRolePage();
+    },3000);
+  }
+
+  function addRoleData(event){
+    event.preventDefault();
     var roleName = document.getElementById("role-rolename").value;
     var department = document.getElementById("role-selectdepartment").value;
     var description = document.getElementById("role-description").value;
@@ -601,15 +615,7 @@ const app = (function() {
       var jsonString=JSON.stringify(NewRoleModel);
       localStorage.setItem("RoleData",jsonString);
     }
-    let toast=document.querySelector(".toast-role");
-    toast.style.display = "flex";
 
-    setTimeout(function() {
-      console.log("hi");
-      toast.style.display = "none";
-      
-    }, 300000);
-  
     var existingempData = localStorage.getItem("EmployeeData");
     var empdataarray=JSON.parse(existingempData);
     for(let i in empdataarray)
@@ -622,6 +628,9 @@ const app = (function() {
         localStorage.setItem("EmployeeData",jsonstring);
       }
     }
+    let toast=document.querySelector(".toast-role");
+    toast.style.display = "flex";
+    customToast();
   }
 
   function createRoleCard(userInformation){
@@ -977,12 +986,12 @@ const app = (function() {
   function showDropDown(){
       var arrow=document.querySelector(".arrow");
       var dropdown=document.querySelector(".userstatus-menu");
-      arrow.src="assets/svg/arrowdownorange.svg";
+      arrow.src="assets/svg/arrowdown.svg";
       if(!dropdown.style.display ||dropdown.style.display == "none"){
           dropdown.style.display="block";
       }
       else if(dropdown.style.display="block"){
-          arrow.src="assets/svg/arrowforwardorange.svg"
+          arrow.src="assets/svg/arrowforward.svg"
           dropdown.style.display="none";
       }
   }
@@ -1126,7 +1135,8 @@ const app = (function() {
     createMultiSelectDropDown:createMultiSelectDropDown,
     showEmptyDisplay:showEmptyDisplay,
     getDepartmentCount:getDepartmentCount,
-    test:test,
+    navigator:navigator,
+    customToast:customToast,
   }
 })();
 

@@ -38,7 +38,6 @@ body{
     justify-content: center;
     align-items: center;
 }
-
 .sidebar-smallsidebar{
     height: 100%;
     width: 16%;
@@ -217,8 +216,6 @@ body{
     display:flex;
     justify-content: space-between;
 }
-
-
 .special-button:hover{
     .dashboard-seperate{
         background-color: rgba(254,233,233,255);
@@ -775,11 +772,6 @@ input[type="radio"] + label{
     display: none;
     margin-top: 1.5rem;
 }
-/*
-.profilepic{
-    width: 4rem;
-    height: 4rem;
-}*/
 .upload-pic{
     height: 5rem;
     display: flex;
@@ -815,7 +807,6 @@ input[type="radio"] + label{
     border-color: rgba(128, 128, 128, 0.265);
     border-width: 1.5px;
 }
-
 .emp-details{
     display: flex;
     gap: 1rem;
@@ -882,7 +873,7 @@ label{
     background-color: none;
 }
 
-/* style3.css */
+/* Roles Page */
 .add-roledetails{
     margin-top: 1.4rem;
     display: flex;
@@ -971,8 +962,6 @@ label{
     color: rgba(246,118,118,255);
     font-size: .9rem;
 }
-
-
 /* Add New Role Section */
 .addnewrole-page{
     display: none;
