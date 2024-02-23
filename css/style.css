@@ -4,7 +4,7 @@ body{
     margin-top: 0;
     display: flex;
 }
-.employee-page, .roledetails-page ,.role-page{
+.employee-page,.roledetails-page ,.role-page{
     display: none;
     margin-left: 1rem;
 }
@@ -18,7 +18,7 @@ body{
     margin-top: -36rem;
     margin-left: 25rem;
     display: none;
-    color: white;
+    color: white;   
     background-color: green;
     justify-content: center;
     align-items: center;

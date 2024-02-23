@@ -153,11 +153,102 @@ const app = (function() {
   }
 
   (function(){
-    handleFileInputChange(),
-    alphabetStateChange(),
-    createMultiSelectDropDown(),
-    getDepartmentCount("UIUX","IT","ProductEngg")
+    document.addEventListener("DOMContentLoaded", function() {
+      insertPagesIntoContainer();
+      //insertingempdom("../employee.html",".employee-page-section");
+      //insertroledetailsdom("../roledetails.html",".role-page-section");
+      //insertroledom("../role.html",".roledetails-page-section");
+    });
   })();
+  
+
+  function insertingempdom(url,targetId){
+    fetch(url)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.text();
+    })
+    .then(html => {
+        document.querySelector(targetId).innerHTML = html;
+            handleFileInputChange(),
+            alphabetStateChange(),
+            createMultiSelectDropDown(),
+            getDepartmentCount("UIUX","IT","ProductEngg")
+    })
+    .catch(error => console.error('Error fetching content:', error));
+  }
+  
+  function insertroledetailsdom(url,targetId){
+    fetch(url)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.text();
+    })
+    .then(html => {
+        document.querySelector(targetId).innerHTML = html;
+    })
+    .catch(error => console.error('Error fetching content:', error));
+  }
+
+  function insertroledom(url,targetId){
+    fetch(url)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.text();
+    })
+    .then(html => {
+        document.querySelector(targetId).innerHTML = html;
+    })
+    .catch(error => console.error('Error fetching content:', error));
+  }
+
+  function insertPagesIntoContainer() {
+    const pageContainer = document.querySelector('.employee-page-section');
+    fetch('../employee.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.text();
+        })
+        .then(html => {
+            pageContainer.innerHTML += html;
+             
+        })
+        .catch(error => console.error('Error fetching content:', error));
+
+    // Fetch and insert content of role page
+    fetch('../role.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.text();
+        })
+        .then(html => {
+            pageContainer.innerHTML += html;
+        })
+        .catch(error => console.error('Error fetching content:', error));
+
+    fetch('../roledetails.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.text();
+        })
+        .then(html => {
+            pageContainer.innerHTML += html;
+        })
+        .catch(error => console.error('Error fetching content:', error));
+  }
+
 
   function createUserRow(data){
     var tableRow = document.createElement('tr');
@@ -704,7 +795,7 @@ const app = (function() {
 
   function showRoleCard(){
     var space=document.querySelector(".info-cards-list-2");
-    space.innerHTML="";
+    space.innerText="";
     for(let i in users){
       let res=createRoleCard(users[i]);
       space.appendChild(res);
@@ -835,28 +926,20 @@ const app = (function() {
   }
 
   function showEmp(){
-    showTableRows();
+    showTableRows()
     var employeepage = document.querySelector(".employee-page");
-    var roledetailspage = document.querySelector(".roledetails-page");
-    var rolepage = document.querySelector(".role-page");
     if(!employeepage.style.display || employeepage.style.display == "none"){
         employeepage.style.display = "block";
-        roledetailspage.style.display = "none";
-        rolepage.style.display = "none";  
     }
     else{
-        employeepage.style.display = "none";
-    }
+         employeepage.style.display = "none";
+     }
   }
 
   function showRole(){
-    var employeepage=document.querySelector(".employee-page");
     var roledetailspage=document.querySelector(".roledetails-page");
-    var rolepage=document.querySelector(".role-page");
     if(!roledetailspage.style.display ||roledetailspage.style.display == "none"){
         roledetailspage.style.display = "block";
-        employeepage.style.display = "none";
-        rolepage.style.display = "none";
     }
     else{
         roledetailspage.style.display = "none";
@@ -865,17 +948,24 @@ const app = (function() {
   }
 
   function showAllEmp(){
-    var employeepage = document.querySelector(".employee-page");
-    var roledetailspage = document.querySelector(".roledetails-page");
+    var roledetailspage=document.querySelector(".roledetails-page");
     var rolepage = document.querySelector(".role-page");
     showRoleCard();
-    if(rolepage.style.display == "none"){
+    if(!rolepage.style.display || rolepage.style.display == "none"){
         rolepage.style.display = "block";
-        employeepage.style.display = "none";
-        roledetailspage.style.display = "none";
+        roledetailspage.style.display="none";
     }
     else{
         rolepage.style.display = "none";
+    }
+  }
+
+  function goback(){
+    var rolepage = document.querySelector(".role-page");
+    var roledetailspage=document.querySelector(".roledetails-page");
+    if(!rolepage.style.display || rolepage.style.display == "block"){
+      rolepage.style.display="none";
+      roledetailspage.style.display="block"
     }
   }
 
@@ -1099,7 +1189,7 @@ const app = (function() {
       emppage.style.display = "none";
     }
   }
-  
+
   return {
     createUserRow: createUserRow,
     addEmployeeData: addEmployeeData,
@@ -1137,11 +1227,7 @@ const app = (function() {
     getDepartmentCount:getDepartmentCount,
     navigator:navigator,
     customToast:customToast,
+    goback:goback,
   }
 })();
-
-
-
-
-
 
