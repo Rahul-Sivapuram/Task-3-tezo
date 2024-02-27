@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tezo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./scripts/script.js"></script>
+</head>
+<body onload="app.getDepartmentCount('UIUX','IT','ProductEngg');app.alphabetStateChange();app.    handleFileInputChange();app.createMultiSelectDropDown();">
+
+    <div class="sidebar-smallsidebar">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-toppart">
+                <div class="logo-arrow">
+                    <img src="assets/images/tezo.png" alt="Tezo logo" class="logo">  
+                    <img src="assets/images/handle.png" alt="Back button" class="backbutton" onclick=app.hideSidebar()>     
+                </div>     
+                <div class="sidebar-buttons">
+                    <h3 class="heading">ALL</h3>
+                    <div class="special-button" onclick="app.showEmptyDisplay()">
+                        <div class="dashboard-seperate">
+                            <div class="dash-left">
+                                <img src="assets/svg/dashboard.svg" alt="Dashboard symbol" srcset="">
+                                <span>Dashboard</span>
+                            </div>
+                            <div class="dash-right">
+                                <img src="assets/svg/arrowforward.svg" alt="Arrow symbol">
+                            </div>
+                        </div>
+                        <div class="corner-line"></div>
+                    </div>
+                    <div class="special-button" onclick="app.showDropDown();app.showEmp();">
+                        <div class="dashboard-seperate">
+                            <div class="dash-left">
+                                <img src="assets/svg/employees.svg" alt="Employees symbol" srcset="">
+                                <span class="employee-seperate">Employees</span>
+                            </div>
+                            <div class="dash-seperate-right">
+                                <img src="assets/svg/arrowforward.svg" alt="Arrow symbol" class="arrow">
+                            </div>
+                        </div>
+                        <div class="corner-line"></div>
+                    </div>
+                
+                    <ul class="userstatus-menu">
+                        <li>
+                            <div class="department-button-left" onclick=app.showTableRows()>
+                                <div class="grey-dot"></div>
+                                <span>All</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="department-button-left" onclick="app.showSpecific('Active','STATUS')">
+                                <div class="grey-dot"></div>
+                                <span>Active</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="department-button-left" onclick="app.showSpecific('Inactive','STATUS')">
+                                <div class="grey-dot"></div>
+                                <span>InActive</span>
+                            </div>
+                        </li>
+                        <br>
+                        <h3 class="sep-heading" style="margin-left: .5rem;">DEPARTMENTS</h3>
+                        <div class="department-button" onclick="app.showSpecific('IT','DEPARTMENT')">
+                            <div class="department-button-left">
+                                <div class="grey-dot"></div>
+                                IT
+                            </div>
+                            <div class="department-button-square-one">
+                                
+                            </div>
+                        </div>
+                        <div class="department-button" onclick="app.showSpecific('UIUX','DEPARTMENT')">
+                            <div class="department-button-left">
+                                <div class="grey-dot"></div>
+                                UIUX
+                            </div>
+                            <div class="department-button-square-two">
+                               
+                            </div>
+                        </div>
+                        <div class="department-button">
+                            <div class="department-button-left" onclick="app.showSpecific('ProductEngg','DEPARTMENT')">
+                                <div class="grey-dot"></div>
+                                Product Engg
+                            </div>
+                            <div class="department-button-square-three">
+                                
+                            </div>
+                        </div>
+                        
+                    </ul>
+            
+                    <!-- ROLE/USER MANAGEMENT -->
+                    <h3 class="heading">ROLE / USER MANAGEMENT</h3>
+                    <div class="special-button">
+                        <div class="dashboard-seperate" onclick=app.showRole()>
+                            <div class="dash-left">
+                                <img src="assets/svg/settingsblack.svg" alt="Setting symbol" srcset="">
+                                <span>Roles</span>
+                            </div>
+                            <div class="dash-right">
+                                <img src="assets/svg/arrowforward.svg" alt="Arrow symbol" class="arrow">
+                            </div>
+                        </div>
+                        <div class="corner-line"></div>
+                    </div>
+                
+                    <div class="special-button">
+                        <div class="dashboard-seperate">
+                            <div class="dash-left">
+                            <img src="assets/svg/account.svg" alt="Account symbol" srcset="">
+                                <span>Access Rights</span>
+                            </div>
+                            <div class="dash-right">
+                                <img src="assets/svg/arrowforward.svg" alt="Arrow symbol" class="arrow">
+                            </div>
+                        </div>
+                        <div class="corner-line"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- update section -->
+            <div class="update-section">
+                <span class="install">Install new update 2.3.1A</span>
+                <p>Allow to launch the new update<br>for the AD application</p>
+                <div class="update-buttons">
+                    <div class="dismiss-button">
+                        <span>Dismiss</span>
+                    </div>
+                    <div class="accept-button">
+                        <span>Accept</span>
+                    </div>
+                </div>
+            </div>             
+        </div>
+
+        <div class="small-sidebar">
+            <div onclick=app.showSidebar() class="menu">
+                <img src="assets/images/handle.png" alt="Arrow menu" srcset="" class="hamburger">
+            </div>
+            <img src="assets/svg/dashboard.svg" alt="Arrow icon" height="15px" width="15px">
+            <img src="assets/svg/employees.svg" alt="GroupOfEmployees icon" height="15px" width="15px" onclick=app.showEmp()>
+            <img src="assets/svg/settingsgrey.svg" alt="Settings icon" height="15px" width="15px" onclick=app.showRole()>
+            <img src="assets/svg/account.svg" alt="Account icon" height="15px" width="15px">
+        </div>
+    </div>
+    
+    <div class="navbar-pages">
+        <!-- Navbar -->
+        <div class="header-searchbar">
+            <div class="search-field">
+                <img src="assets/images/bxsearch.png" alt="Search symbol">
+                <input type="search" name="search"  id="search" placeholder="Search (Ctrl+/)" class="search-box">
+            </div>
+            <div class="profile">
+                <img src="assets/images/chineese.png" alt="Chineese symbol" srcset="">
+                <img src="assets/images/icon1.png" alt="Menu symbol" srcset="">
+                <img src="assets/images/icon2.png" alt="Moon symbol" srcset="">
+                <img src="assets/images/icon3.png" alt="Bell symbol" srcset="">                         
+            </div>
+            <div class="profile-box">
+                <div class="man">
+                    <img src="assets/images/man.jpg" alt="Human avatar" srcset="">
+                    <div class="green-dot"></div>
+                </div>
+                <span>John Abraham<br><span class="span-inside">Admin</span></span>
+                <img src="assets/svg/arrowdown.svg" alt="Dropdown icon" srcset="">
+            </div>   
+        </div>
+
+        <!--Page-->
+        <div class="employee-page-section"></div>
+    </div>
+
+</body>
+</html>     
+
